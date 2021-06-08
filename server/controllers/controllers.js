@@ -3,6 +3,7 @@ const keystone = require('keystone');
 
 const Event = keystone.list('Events');
 const Post = keystone.list('Posts');
+const Feedback = keystone.list('Feedbacks');
 
 exports.getIndex = function (req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
@@ -26,5 +27,15 @@ exports.getPosts = function (req, res) {
             res.send(data);
         }
     });
+}
+
+exports.getFeedbacks = function (request, response) {
+    Feedback.model.find((error, data) => {
+        if(error){
+            response.status(500).send('DB Error')
+        } else {
+            response.send(data)
+        }
+    } )
 }
 
