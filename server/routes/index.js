@@ -1,11 +1,6 @@
-const path = require('path');
-const keystone = require('keystone');
 const cors = require('cors');
 
-const controller = require("../controllers/controllers")
-
-const Post = keystone.list('Posts');
-const Event = keystone.list('Events');
+const controller = require("../controllers/controllers");
 
 module.exports = (app) => {
   app.use(cors());
@@ -22,4 +17,7 @@ module.exports = (app) => {
     controller.getEvents(req, res)
   );
 
+  app.get('/api/feedbacks', (request, response) => {
+    controller.getFeedbacks(request, response)
+  });
 };
