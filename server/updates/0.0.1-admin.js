@@ -1,5 +1,6 @@
 const keystone = require('keystone');
 const User = keystone.list('User');
+const Detail = keystone.list("Details")
 
 exports = module.exports = (done) => {
 	new User.model({
