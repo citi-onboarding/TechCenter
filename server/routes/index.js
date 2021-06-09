@@ -20,4 +20,8 @@ module.exports = (app) => {
   app.get('/api/feedbacks', (request, response) => {
     controller.getFeedbacks(request, response)
   });
+
+  app.get('/api/socialmedias', (request, response) => {
+    controller.getSocialMedia(request, response)
+  });
 };
