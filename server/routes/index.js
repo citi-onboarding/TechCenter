@@ -1,27 +1,26 @@
 const cors = require('cors');
 
 const controller = require("../controllers/controllers");
+const feedbackController = require('../controllers/FeedbackController');
+const socialMediaController = require('../controllers/SocialMediaController');
+const eventController = require('../controllers/EventController');
 
 module.exports = (app) => {
   app.use(cors());
 
-  app.get('/', (req, res) =>
-    controller.getIndex(req, res)
-  );
+  app.get('/', (request, response) => {
+    controller.getIndex(request, response)
+  });
 
-  app.get('/api/posts', (req, res) =>
-    controller.getPosts(req, res)
-  );
-
-  app.get('/api/events', (req, res) =>
-    controller.getEvents(req, res)
-  );
+  app.get('/api/events', (request, response) => {
+    eventController.getEvents(request, response)
+  });
 
   app.get('/api/feedbacks', (request, response) => {
-    controller.getFeedbacks(request, response)
+    feedbackController.getFeedbacks(request, response)
   });
 
   app.get('/api/socialmedias', (request, response) => {
-    controller.getSocialMedia(request, response)
+    socialMediaController.getSocialMedia(request, response)
   });
 };
