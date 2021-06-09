@@ -2,8 +2,9 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const Event = new keystone.List('Events');
-
+const Event = new keystone.List('Events', {
+    defaultColumns: 'Title, Date'
+});
 
 Event.add({
     Image: {

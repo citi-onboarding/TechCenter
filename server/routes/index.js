@@ -24,4 +24,8 @@ module.exports = (app) => {
   app.get('/api/socialmedias', (request, response) => {
     controller.getSocialMedia(request, response)
   });
-};
+
+  app.get('/api/details', (request, response) => {
+    controller.getDetails(request, response)
+  });
+}
