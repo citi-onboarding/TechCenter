@@ -2,7 +2,12 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const Partnership = new keystone.List('Feedbacks');
+const Partnership = new keystone.List('Partnership', {
+    autocreate: true,
+    nocreate: true,
+    nodelete: true,
+    defaultColumns: 'Imagem, Name, Link, Show'
+});
 
 Partnership.add({
     Image: {
@@ -18,6 +23,9 @@ Partnership.add({
     Link: {
         type: Types.Text,
         initial: true,
+    },
+    Show: {
+        type: Types.Boolean
     }
 })
 
