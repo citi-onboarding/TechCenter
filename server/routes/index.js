@@ -4,6 +4,7 @@ const controller = require("../controllers/controllers");
 const feedbackController = require('../controllers/FeedbackController');
 const socialMediaController = require('../controllers/SocialMediaController');
 const eventController = require('../controllers/EventController');
+const partnershipsController = require('../controllers/PartnershipsController');
 
 module.exports = (app) => {
   app.use(cors());
@@ -23,4 +24,8 @@ module.exports = (app) => {
   app.get('/api/socialmedias', (request, response) => {
     socialMediaController.getSocialMedia(request, response)
   });
+
+  app.get('/api/partnerships', (request, response) => {
+    partnershipsController.getPartnerships(request, response)
+  })
 };
