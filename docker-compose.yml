@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+    server:
+        build: "./server/"
+        expose:
+            - "3001"
+        ports: 
+            - "3001:3001"
+        command: yarn run dev
+
+    front:
+        build: "./client/"
+        expose: 
+            - "3000"
+        ports:
+            - "3000:3000"
+        command: yarn start
+        depends_on: 
+            - server
