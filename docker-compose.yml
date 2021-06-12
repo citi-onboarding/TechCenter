@@ -3,6 +3,8 @@ version: '3'
 services:
     server:
         build: "./server/"
+        volumes:
+            - "./server:/server"
         expose:
             - "3001"
         ports: 
@@ -11,6 +13,8 @@ services:
 
     front:
         build: "./client/"
+        volumes:
+            - "./client:/client"
         expose: 
             - "3000"
         ports:

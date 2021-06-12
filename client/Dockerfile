@@ -1,13 +1,14 @@
 FROM node:latest
 
-RUN mkdir /source
-WORKDIR /source
+RUN mkdir /client
+WORKDIR /client 
 
-COPY package.json /source
+COPY package.json /client
+COPY yarn.lock /client
 
 RUN yarn install
 
-COPY . /source
+COPY . /client
 
 CMD ["yarn", "start"]
 
