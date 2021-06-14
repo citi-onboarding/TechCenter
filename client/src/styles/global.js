@@ -3,9 +3,10 @@ import {
 } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-    :root  {
-        --PRIMARY-BLUE-COLOR: "#1B284C";
-        --PRIMARY-YELLOW-COLOR: "#F1C40F";
+
+    :root {
+        --FIRST-PRIMARY-COLOR: #1B284C;
+        --SECOND-PRIMARY-COLOR: #FAC747;  
     }
 
     * {

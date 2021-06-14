@@ -1,12 +1,21 @@
 import React from 'react';
+import { GlobalStyle } from '../../styles/global.js';
 import {
-    Container
-} from './styles';
+    InitialSectionContainer,
+    InitialSectionTextContainer,
+    InitialSectionImageContainer
+} from './styles.js';
 
 export default function InitialSection(){
     return(
-        <Container>
-            
-        </Container>
+        <InitialSectionContainer>
+            <InitialSectionTextContainer>
+                <p>texto</p>
+            </InitialSectionTextContainer>
+
+            <InitialSectionImageContainer>
+                <p>ola</p>
+            </InitialSectionImageContainer>
+        </InitialSectionContainer>
     );
 }
