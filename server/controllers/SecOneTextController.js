@@ -1,5 +1,5 @@
 const keystone = require('keystone');
-const FirstText = keystone.list('Texto Inicial');
+const FirstText = keystone.list('Abouts');
 
 exports.getFirstText = (request, response) => {
     FirstText.model.find((error, data) => {
