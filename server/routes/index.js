@@ -6,6 +6,7 @@ const socialMediaController = require('../controllers/SocialMediaController');
 const eventController = require('../controllers/EventController');
 const partnershipsController = require('../controllers/PartnershipsController');
 const firstTextController = require("../controllers/SecOneTextController");
+const aboutUs = require('../controllers/AboutUsController');
 
 
 module.exports = (app) => {
@@ -33,5 +34,9 @@ module.exports = (app) => {
 
   app.get('/api/first-text', (request, response) => {
     firstTextController.getFirstText(request, response)
+  });
+
+  app.get('/api/aboutus', (request, response) =>  {
+    aboutUs.getAbouts(request,response)
   });
 };
