@@ -6,7 +6,8 @@ export const GlobalStyle = createGlobalStyle`
 
     :root {
         --FIRST-PRIMARY-COLOR: #1B284C;
-        --SECOND-PRIMARY-COLOR: #FAC747;  
+        --SECOND-PRIMARY-COLOR: #FAC747;
+        --COLOR-TEXT: #F4F4F4;
     }
 
     * {
@@ -29,5 +30,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Barlow', sans-serif;
         font-style: normal;
         font-weight: normal;
+        color: var(--COLOR-TEXT);
     }
 `
