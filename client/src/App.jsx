@@ -1,4 +1,4 @@
-import InitialScetion from "./components/InitialSection/index";
+import InitialScetion from "./components/Sections/InitialSection";
 import { GlobalStyle } from "./styles/global.js";
 
 function App() {

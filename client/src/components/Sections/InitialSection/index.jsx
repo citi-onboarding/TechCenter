@@ -4,7 +4,8 @@ import {
     InitialSectionTextContainer,
     InitialSectionImageContainer
 } from './styles.js';
-import logoTechCenter from '../../assets/logoTechCenter.svg';
+import logoTechCenter from '../../../assets/logoTechCenter.svg';
+import ButtonTechCenter from '../../Button/index.jsx';
 
 export default function InitialSection(){
     return(
@@ -19,8 +20,7 @@ export default function InitialSection(){
                     igualitário e inclusivo."
                 </p>
 
-                <Button type = "primary">Entrar na comunidade</Button>
-
+                <ButtonTechCenter className="join-to-community" description="Entrar na comunidade"/>
             </InitialSectionTextContainer>
 
             <InitialSectionImageContainer>

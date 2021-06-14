@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         --FIRST-PRIMARY-COLOR: #1B284C;
         --SECOND-PRIMARY-COLOR: #FAC747;
         --COLOR-TEXT: #F4F4F4;
+        --BUTTON-TEXT-COLOR: #1B284C;
     }
 
     * {

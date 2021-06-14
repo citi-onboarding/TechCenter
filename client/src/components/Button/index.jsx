@@ -1,7 +1,12 @@
-import React from 'react'; 
+import React from 'react';
 import {
-    Button
-} from 'antd';
-import 'antd/dist/antd.css';
+    ButtonContainer
+} from "./styles.js";
 
-export default Button
+export default function ButtonTechCenter({className, description}){
+    return(
+        <ButtonContainer>
+            <button className = {className}>{ description}</button>
+        </ButtonContainer>
+    );    
+}
