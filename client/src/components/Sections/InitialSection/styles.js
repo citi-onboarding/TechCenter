@@ -7,14 +7,14 @@ export const InitialSectionContainer = styled.header`
     align-items: center;
     justify-content: space-around;
 
-    height: 100vh;
+    height: 94vh;
     width: 100%;
 
     background: var(--FIRST-PRIMARY-COLOR);
 `
 
 export const InitialSectionTextContainer = styled.div`
-    margin-left: 8rem;
+    margin-left: 4rem;
     margin-bottom: 6rem;
     width: 40rem;
 
@@ -27,7 +27,7 @@ export const InitialSectionTextContainer = styled.div`
 
         &.description {
             text-align: justify;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
     }
 `
@@ -37,6 +37,7 @@ export const InitialSectionImageContainer = styled.div`
     margin-bottom: 14rem;
 
     img {
-        width: 36rem;
+        width: 37rem;
+        margin-left: 1.8rem;
     }
 `

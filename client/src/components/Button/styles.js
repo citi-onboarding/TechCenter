@@ -12,8 +12,8 @@ export const ButtonContainer = styled.div`
         font-weight: bold;
     
         &.join-to-community {
-            width: 18.3rem;
-            height: 5.5rem;
+            width: 17rem;
+            height: 5rem;
             
             background: var(--SECOND-PRIMARY-COLOR);
             color: var(--FIRST-PRIMARY-COLOR)
