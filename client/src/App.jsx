@@ -1,10 +1,9 @@
-import {
-  PostList,
-} from './components';
 
 function App() {
   return (
-    <PostList />
+    <div>
+      hello world teste
+    </div>
   );
 }
 

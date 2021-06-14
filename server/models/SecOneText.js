@@ -20,4 +20,3 @@ FirstText.add({
 });
 
 FirstText.register();
-
