@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         --SECOND-PRIMARY-COLOR: #FAC747;
         --COLOR-TEXT: #F4F4F4;
         --BUTTON-TEXT-COLOR: #1B284C;
+        --WHITE-BACKGROUND: #E5E5E5; 
     }
 
     * {
@@ -32,5 +33,6 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-weight: normal;
         color: var(--COLOR-TEXT);
+        background: var(--FIRST-PRIMARY-COLOR);
     }
 `

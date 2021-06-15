@@ -38,6 +38,6 @@ export const InitialSectionImageContainer = styled.div`
 
     img {
         width: 37rem;
-        margin-left: 1.8rem;
+        margin-left: 3rem;
     }
 `
