@@ -4,9 +4,10 @@ import {
     EventTopContainer,
     EventCarousel
 } from './styles';
+import { CarouselItemContainer } from '../../CarouselItem/styles';
 
-export default function Event(){
-    return(
+export default function Event() {
+    return (
 
         <EventContainer>
 
@@ -19,16 +20,20 @@ export default function Event(){
 
                 <div>
                     <p className="description">
-                    Somos uma comunidade e nos reunimos em momentos de construção conjunta, trocando conhecimento e transformando juntos!
+                        Somos uma comunidade e nos reunimos em momentos de construção conjunta, trocando conhecimento e transformando juntos!
                     </p>
                 </div>
 
             </EventTopContainer>
 
 
-            <EventCarousel>
 
-            </EventCarousel>
+
+            <CarouselItemContainer>
+
+            </CarouselItemContainer>
+
+
         </EventContainer>
 
     );

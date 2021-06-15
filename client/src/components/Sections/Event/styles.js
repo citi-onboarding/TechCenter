@@ -55,6 +55,4 @@ export const EventTopContainer = styled.div`
 export const EventCarousel = styled.div`
     width: 85%;
     height: 40%;
-
-    background: pink;
 `
