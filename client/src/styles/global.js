@@ -33,6 +33,6 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-weight: normal;
         color: var(--COLOR-TEXT);
-        background: var(--FIRST-PRIMARY-COLOR);
+        background: var(--WHITE---WHITE-BACKGROUND);
     }
 `
