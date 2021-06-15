@@ -12,11 +12,22 @@ export default function Event(){
 
             <EventTopContainer>
 
+                <div className="hightlight-box">
+                    <p className="title">Eventos</p>
+                    <p>Tech Center</p>
+                </div>
+
+                <div>
+                    <p className="description">
+                    Somos uma comunidade e nos reunimos em momentos de construção conjunta, trocando conhecimento e transformando juntos!
+                    </p>
+                </div>
+
             </EventTopContainer>
 
 
             <EventCarousel>
-                
+
             </EventCarousel>
         </EventContainer>
 
