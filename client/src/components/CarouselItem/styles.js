@@ -24,8 +24,10 @@ export const CarouselItemContainer = styled.header`
 
 export const CarouselItemContainerImage = styled.div`
     height: 58%;
-    background-image: url("https://s2.glbimg.com/QqEDyJyWVPTI9tU-5izKpJls6UE=/620x520/smart/e.glbimg.com/og/ed/f/original/2020/11/30/baby-yoda.jpg");
+    width: 250px;
+    background-image: ${({ url }) => `url(${url})`};
     background-size: cover;
+    background-position: center;
 `
 
 export const CarouselItemContainerInformation = styled.div`

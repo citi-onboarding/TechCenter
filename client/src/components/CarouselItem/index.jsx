@@ -5,11 +5,11 @@ import {
     CarouselItemContainerInformation
 } from './styles.js';
 
-export default function CarouselItem() {
+export default function CarouselItem({image}) {
     return (
         <CarouselItemContainer>
 
-            <CarouselItemContainerImage/>
+            <CarouselItemContainerImage url={image}/>
 
             <CarouselItemContainerInformation>
                 <p className="title">Insights Center</p>
