@@ -10,8 +10,7 @@ function App() {
       <GlobalStyle/>
       <InitialScetion/>
       <AboutUs/>
-
-      <CarouselItem/>
+      <Event/>
     </>
   );
 }

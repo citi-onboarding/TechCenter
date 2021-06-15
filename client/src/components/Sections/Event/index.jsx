@@ -2,11 +2,21 @@ import react from 'react';
 import {
     EventContainer,
     EventTopContainer,
-    EventCarousel
+    EventCarousel,
+    EventCarrouselContaier
 } from './styles';
-import { CarouselItemContainer } from '../../CarouselItem/styles';
+import CarouselItem from '../../CarouselItem';
+import Slider from "react-slick";
 
 export default function Event() {
+
+    const carouselSettings = {
+        dots: true,
+        inifite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 2
+    }
     return (
 
         <EventContainer>
@@ -26,12 +36,19 @@ export default function Event() {
 
             </EventTopContainer>
 
+            <EventCarrouselContaier>
 
+            <EventCarousel>
+                <Slider {...carouselSettings}>
+                    <CarouselItem/>
+                    <CarouselItem/>
+                    <CarouselItem/>
+                    <CarouselItem/>
+                    <CarouselItem/>
+                </Slider>
+            </EventCarousel>
 
-
-            <CarouselItemContainer>
-
-            </CarouselItemContainer>
+            </EventCarrouselContaier>
 
 
         </EventContainer>

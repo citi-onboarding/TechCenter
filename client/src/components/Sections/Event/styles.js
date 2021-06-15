@@ -2,19 +2,19 @@ import styled from 'styled-components';
 
 export const EventContainer = styled.header`
     width: 100%;
-    height: 80vh;
+    height: 95vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    background: var(--FIRST-PRIMARY-COLOR);
+    background: var(--WHITE-BACKGROUND);
 `
 
 export const EventTopContainer = styled.div`
     width: 85%;
-    height: 60%;
+    height: 80%;
 
     background: var(--WHITE-BACKGROUND);
 
@@ -54,5 +54,18 @@ export const EventTopContainer = styled.div`
 
 export const EventCarousel = styled.div`
     width: 85%;
-    height: 40%;
+
+    position: relative;
+    bottom: 8rem;
+`
+
+export const EventCarrouselContaier = styled.div`
+    width: 100%;
+    height:50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--FIRST-PRIMARY-COLOR);
+
 `

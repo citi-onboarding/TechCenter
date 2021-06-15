@@ -34,6 +34,6 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-weight: normal;
         color: var(--COLOR-TEXT);
-        background: var(--WHITE---WHITE-BACKGROUND);
+        background: var(--WHITE-BACKGROUND);
     }
 `

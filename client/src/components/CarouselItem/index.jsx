@@ -4,7 +4,6 @@ import {
     CarouselItemContainerImage,
     CarouselItemContainerInformation
 } from './styles.js';
-import baby from '../../assets/baby.jpeg';
 
 export default function CarouselItem() {
     return (
