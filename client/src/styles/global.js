@@ -10,7 +10,9 @@ export const GlobalStyle = createGlobalStyle`
         --COLOR-TEXT: #F4F4F4;
         --BUTTON-TEXT-COLOR: #1B284C;
         --WHITE-BACKGROUND: #E5E5E5;
-        --BLACK: #000000; 
+        --BLACK: #000000;
+        --CIRCLE-SLICK-WITHOUT-HIGHLIGHT: #898C8F;
+        --CIRCLE-SLICK-IN-HIGHTLIGHT:#E0E0E0;
     }
 
     * {

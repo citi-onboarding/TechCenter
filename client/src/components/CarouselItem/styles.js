@@ -11,8 +11,7 @@ export const CarouselItemContainer = styled.header`
 
     background: #f5f5f5;
 
-    margin-bottom: 40px;
-
+    margin: 0 auto 0 0;
 
     div {
 
@@ -25,11 +24,8 @@ export const CarouselItemContainer = styled.header`
 
 export const CarouselItemContainerImage = styled.div`
     height: 58%;
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
+    background-image: url("https://s2.glbimg.com/QqEDyJyWVPTI9tU-5izKpJls6UE=/620x520/smart/e.glbimg.com/og/ed/f/original/2020/11/30/baby-yoda.jpg");
+    background-size: cover;
 `
 
 export const CarouselItemContainerInformation = styled.div`

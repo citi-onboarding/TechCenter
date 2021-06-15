@@ -9,10 +9,7 @@ export default function CarouselItem() {
     return (
         <CarouselItemContainer>
 
-            <CarouselItemContainerImage>
-                <img src="https://s2.glbimg.com/QqEDyJyWVPTI9tU-5izKpJls6UE=/620x520/smart/e.glbimg.com/og/ed/f/original/2020/11/30/baby-yoda.jpg" alt="Event" />
-            </CarouselItemContainerImage>
-
+            <CarouselItemContainerImage/>
 
             <CarouselItemContainerInformation>
                 <p className="title">Insights Center</p>

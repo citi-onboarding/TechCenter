@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AboutUsContainer = styled.header`
     width: 100%;
-    height: 90vh;
+    height: 650px;
     margin: 0 auto;
     margin-bottom: 10px;
 

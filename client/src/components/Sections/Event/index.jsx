@@ -3,10 +3,12 @@ import {
     EventContainer,
     EventTopContainer,
     EventCarousel,
-    EventCarrouselContaier
+    EventCarouselContaier
 } from './styles';
 import CarouselItem from '../../CarouselItem';
 import Slider from "react-slick";
+import './testando.css';
+import Arrow from '../../Arrow';
 
 export default function Event() {
 
@@ -14,9 +16,12 @@ export default function Event() {
         dots: true,
         inifite: true,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 2
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        nextArrow: <Arrow/>,
+        prevArrow: <Arrow/>,
     }
+
     return (
 
         <EventContainer>
@@ -36,7 +41,7 @@ export default function Event() {
 
             </EventTopContainer>
 
-            <EventCarrouselContaier>
+            <EventCarouselContaier>
 
             <EventCarousel>
                 <Slider {...carouselSettings}>
@@ -48,7 +53,7 @@ export default function Event() {
                 </Slider>
             </EventCarousel>
 
-            </EventCarrouselContaier>
+            </EventCarouselContaier>
 
 
         </EventContainer>

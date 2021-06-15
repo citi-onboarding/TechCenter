@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const EventContainer = styled.header`
     width: 100%;
-    height: 95vh;
+    height: 620px;
 
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ export const EventContainer = styled.header`
 
 export const EventTopContainer = styled.div`
     width: 85%;
-    height: 80%;
+    height: 70%;
 
     background: var(--WHITE-BACKGROUND);
 
@@ -56,12 +56,12 @@ export const EventCarousel = styled.div`
     width: 85%;
 
     position: relative;
-    bottom: 8rem;
+    bottom: 8.5rem;
 `
 
-export const EventCarrouselContaier = styled.div`
+export const EventCarouselContaier = styled.div`
     width: 100%;
-    height:50%;
+    height: 50%;
 
     display: flex;
     align-items: center;
