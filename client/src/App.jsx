@@ -1,6 +1,7 @@
 import InitialScetion from "./components/Sections/InitialSection";
 import { GlobalStyle } from "./styles/global.js";
 import AboutUs from "./components/Sections/AboutUs";
+import Event from "./components/Sections/Event";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle/>
       <InitialScetion/>
       <AboutUs/>
+      <Event/>
     </>
   );
 }
