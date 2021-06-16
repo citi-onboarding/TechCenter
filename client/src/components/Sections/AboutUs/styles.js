@@ -74,6 +74,8 @@ export const ValuesAboutUsContainer = styled.div`
 
     display: grid;
     grid-template-columns: repeat(3,auto);
+    outline: none;
+    border: none;
 
     div {
         border-right: 1px solid black;
@@ -110,6 +112,7 @@ export const ValuesAboutUsContainer = styled.div`
             background: var(--WHITE-BACKGROUND);
             color: var(--FIRST-PRIMARY-COLOR);
             box-shadow: none;
+            box-shadow: inset 0px 5px 2px -2px gray;
         }
 
     }
