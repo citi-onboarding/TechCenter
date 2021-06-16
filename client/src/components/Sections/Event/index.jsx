@@ -5,7 +5,7 @@ import {
     EventCarousel,
     EventCarouselContaier
 } from './styles';
-import CarouselItem from '../../CarouselItem';
+import CarouselItem from '../../EventCarouselItem';
 import Slider from "react-slick";
 import './testando.css';
 import Arrow from '../../Arrow';
