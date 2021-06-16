@@ -1,9 +1,12 @@
+import InitialScetion from "./components/Sections/InitialSection";
+import { GlobalStyle } from "./styles/global.js";
 
 function App() {
   return (
-    <div>
-      hello world teste
-    </div>
+    <>
+      <GlobalStyle/>
+      <InitialScetion/>
+    </>
   );
 }
 
