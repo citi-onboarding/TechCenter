@@ -10,16 +10,15 @@ import {
     DoubleRightOutlined
 } from '@ant-design/icons'
 
-export default function CarouselItem({image}) {
+export default function EventCarouselItem({event}) {
     return (
         <EventCarouselItemContainer>
-
-            <EventCarouselItemContainerImage url={image}/>
+            <EventCarouselItemContainerImage url={event.Image.url}/>
 
             <EventCarouselItemContainerInformation>
-                <p className="title">Insights Center</p>
-                <p className="description">Evento para EJ’s de todo o Brasil</p>
-                <p className="date">18 de Agosto às 15h </p>
+                <p className="title">{event.Title}</p>
+                <p className="description">{event.Description}</p>
+                <p className="date">{event.Date}</p>
             </EventCarouselItemContainerInformation>
 
             <EventCarouselItemButton>
@@ -29,9 +28,6 @@ export default function CarouselItem({image}) {
                     }}/>
                 </div>
             </EventCarouselItemButton>
-
-
-
         </EventCarouselItemContainer>
     );
 }

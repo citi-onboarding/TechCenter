@@ -1,7 +1,7 @@
-import react, { useEffect } from 'react';
+import react, { useEffect, useState } from 'react';
 import Slider from "react-slick";
 import './changeCarousel.css';
-import CarouselItem from '../../EventCarouselItem';
+import EventCarouselItem from '../../EventCarouselItem';
 import API from '../../../services/API';
 import {
     EventContainer,
@@ -14,15 +14,21 @@ import {
     mainCarouselSettings
 } from './CarouselSettings.js';
 
+import { ConvertDateTime } from './ConvertDateTime';
+
 export default function Event() {
+
+    const [events, setEvents ]= useState([]);
 
     async function getEvents(){
         await API.get('/events').then((response) => {
-            console.log(response.data[0]);
-            const {Image,Link,Date,Tile, Description,} = response.data[0];
-            console.log(Image[0]);
-            const {url} = Image[0];
-            console.log(url);
+            let amountOfEvents = [];
+            response.data.forEach((event) => {
+                event.Image = event.Image[0];
+                event.Date = ConvertDateTime(event.Date);
+                amountOfEvents.push(event);
+            })
+            setEvents(amountOfEvents);
         }).catch((error) => {
             console.log(error);
         })
@@ -55,11 +61,17 @@ export default function Event() {
 
             <EventCarousel>
                 <Slider {...mainCarouselSettings}>
-                    <CarouselItem image="https://i.pinimg.com/originals/1e/06/e1/1e06e107f0ca520aed316957b685ef5c.jpg"/>
-                    <CarouselItem image="https://i.pinimg.com/originals/de/f6/96/def69643889ee29e232637646e839064.jpg"/>
-                    <CarouselItem image="https://portalfotografianapratica.com/wp-content/uploads/2019/09/miniatura-01-730x410.jpg"/>
-                    <CarouselItem image="https://s1.1zoom.me/big0/703/Planets_Trees_Night_576489_1280x800.jpg"/>
-                    <CarouselItem image="https://img.freepik.com/fotos-gratis/muitos-baloes-coloridos-no-ceu-azul-conceito-de-amor-no-verao-e-namorados-lua-de-mel-de-casamento-imagens-de-estilo-de-efeito-vintage_1253-1119.jpg?size=338&ext=jpg&ga=GA1.1.1243305198.1623196800"/>
+                    {
+                        events.map((event,index) => {
+                            console.log(event)
+                            return (
+                                <EventCarouselItem
+                                    key={index}
+                                    event = {event}
+                                />
+                            );
+                        })
+                    }
                 </Slider>
             </EventCarousel>
 

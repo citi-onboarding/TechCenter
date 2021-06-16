@@ -42,8 +42,6 @@ export default function AboutUs() {
                     <p className="title">Impactamos o</p>
                     <p>pensamento tech!</p>
                 </div>
-
-
             </TopAboutUsContainer>
 
             <ValuesAboutUsContainer>
@@ -62,6 +60,5 @@ export default function AboutUs() {
                 }
             </ValuesAboutUsContainer>
         </AboutUsContainer>
-
     );
 }
