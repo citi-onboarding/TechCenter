@@ -18,8 +18,8 @@ export default function Event() {
         speed: 500,
         slidesToShow: 3.5,
         slidesToScroll: 1,
-        nextArrow: <Arrow/>,
-        prevArrow: <Arrow/>,
+        nextArrow: <Arrow direction="left"/>,
+        prevArrow: <Arrow direction="right"/>,
         centerMode: true
     }
 

@@ -7,6 +7,8 @@ import {
 
 import legos from '../../../assets/legos.svg';
 import diversity from '../../../assets/diversity.svg';
+import teaching from '../../../assets/teaching.svg';
+import deployment from '../../../assets/deployment.svg';
 
 export default function AboutUs() {
 
@@ -31,7 +33,7 @@ export default function AboutUs() {
             <ValuesAboutUsContainer>
 
                 <div>
-                    <img src={diversity} alt="" />
+                    <img src={diversity} alt="Diversity Icon" />
 
                     <p className="title">Diversidade</p>
 
@@ -39,18 +41,18 @@ export default function AboutUs() {
                 </div>
 
                 <div className="mid-values">
-                    <img src={diversity} alt="" />
+                    <img src={deployment} alt="" />
 
-                    <p className="title">Diversidade</p>
+                    <p className="title">Colaboratividade</p>
 
                     <p className="description">asdljasldjaskldjaskldjaklsdjalskdjaklsdjaklsdjakldja</p>
 
                 </div>
 
                 <div>
-                    <img src={diversity} alt="" />
+                    <img src={teaching} alt="Teaching Icon" />
 
-                    <p className="title">Diversidade</p>
+                    <p className="title">Aprender para ensinar e ensinar para aprender</p>
 
                     <p className="description">asdljasldjaskldjaskldjaklsdjalskdjaklsdjaklsdjakldja</p>
 

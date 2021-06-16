@@ -13,6 +13,9 @@ export const GlobalStyle = createGlobalStyle`
         --BLACK: #000000;
         --CIRCLE-SLICK-WITHOUT-HIGHLIGHT: #898C8F;
         --CIRCLE-SLICK-IN-HIGHTLIGHT:#E0E0E0;
+        --BUTTON-SLICK: #FFFFFF;
+        --ARROW-COLOR: #262626;
+        --BORDER-ARROW-COLOR: #D9D9D9;
     }
 
     * {

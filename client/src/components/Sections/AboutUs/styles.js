@@ -83,14 +83,16 @@ export const ValuesAboutUsContainer = styled.div`
         align-items: center;
         justify-content: center;
 
-        box-shadow: 0 4px 2px -2px gray;;
+        box-shadow: 0 4px 2px -2px gray;
 
         p {
 
             word-wrap: break-word;
             text-align: center;
+            width: 36rem;
 
             &.title {
+                
                 margin-top: 2rem;
                 font-size: 2rem;
                 font-weight: 700;
