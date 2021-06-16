@@ -63,7 +63,6 @@ export default function Event() {
                 <Slider {...mainCarouselSettings}>
                     {
                         events.map((event,index) => {
-                            console.log(event)
                             return (
                                 <EventCarouselItem
                                     key={index}
