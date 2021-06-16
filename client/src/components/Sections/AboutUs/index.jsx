@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     AboutUsContainer,
     TopAboutUsContainer,
@@ -9,8 +9,29 @@ import legos from '../../../assets/legos.svg';
 import diversity from '../../../assets/diversity.svg';
 import teaching from '../../../assets/teaching.svg';
 import deployment from '../../../assets/deployment.svg';
+import API from '../../../services/API';
 
 export default function AboutUs() {
+
+    const  [firstValue, setFirstValue] = useState([]);
+    const  [secondValue, setSecondValue] = useState([]);
+    const  [thirdValue, setThirdValue] = useState([]);
+
+
+    async function getValuesInformation(){
+        API.get('/aboutus').then((response)=> {
+            const values = response.data;
+            setFirstValue(values[0]);
+            setSecondValue(values[1]);
+            setThirdValue(values[2]);
+        }).catch((error)=> {
+            console.log(error);
+        })
+    }
+
+    useEffect(()=>{
+        getValuesInformation()
+    }, [])
 
     return (
         <AboutUsContainer>
@@ -35,26 +56,26 @@ export default function AboutUs() {
                 <div>
                     <img src={diversity} alt="Diversity Icon" />
 
-                    <p className="title">Diversidade</p>
+                    <p className="title">{firstValue.Title}</p>
 
-                    <p className="description">asdljasldjaskldjaskldjaklsdjalskdjaklsdjaklsdjakldja</p>
+                    <p className="description">{firstValue.Description}</p>
                 </div>
 
                 <div className="mid-values">
                     <img src={deployment} alt="" />
 
-                    <p className="title">Colaboratividade</p>
+                    <p className="title">{secondValue.Title}</p>
 
-                    <p className="description">asdljasldjaskldjaskldjaklsdjalskdjaklsdjaklsdjakldja</p>
+                    <p className="description">{secondValue.Description}</p>
 
                 </div>
 
                 <div>
                     <img src={teaching} alt="Teaching Icon" />
 
-                    <p className="title">Aprender para ensinar e ensinar para aprender</p>
+                    <p className="title">{thirdValue.Title}</p>
 
-                    <p className="description">asdljasldjaskldjaskldjaklsdjalskdjaklsdjaklsdjakldja</p>
+                    <p className="description">{secondValue.Description}</p>
 
                 </div>
 
