@@ -1,12 +1,16 @@
-import InitialScetion from "./components/Sections/InitialSection";
+import FeedBackSection from "./components/Sections/FeedBackSection";
 import { GlobalStyle } from "./styles/global.js";
+import InitialSection from "./components/Sections/InitialSection";
+import React from "react";
 
 function App() {
+
   return (
-    <>
-      <GlobalStyle/>
-      <InitialScetion/>
-    </>
+    <React.Fragment>
+      <GlobalStyle />
+      <InitialSection />
+      <FeedBackSection />
+    </React.Fragment>
   );
 }
 

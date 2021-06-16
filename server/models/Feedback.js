@@ -5,10 +5,6 @@ const { Types } = keystone.Field;
 const Feedback = new keystone.List('Feedbacks');
 
 Feedback.add({
-    Image: {
-        type: Types.CloudinaryImages,
-        initial: true,
-    },
     Author: {
         type: Types.Text,
         require: true,
