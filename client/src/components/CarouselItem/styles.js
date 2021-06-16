@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const CarouselItemContainer = styled.header`
-    width: 25rem;
-    height: 25rem;
+    width: 26rem;
+    height: 26rem;
 
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ export const CarouselItemContainer = styled.header`
 
 export const CarouselItemContainerImage = styled.div`
     height: 58%;
-    width: 250px;
+    width: 22rem;
     background-image: ${({ url }) => `url(${url})`};
     background-size: cover;
     background-position: center;
