@@ -13,17 +13,12 @@ import API from '../../../services/API';
 
 export default function AboutUs() {
 
-    const  [firstValue, setFirstValue] = useState([]);
-    const  [secondValue, setSecondValue] = useState([]);
-    const  [thirdValue, setThirdValue] = useState([]);
-
+    const [values, setValues] = useState([]);
+    const images = [diversity, deployment, teaching];
 
     async function getValuesInformation(){
-        API.get('/aboutus').then((response)=> {
-            const values = response.data;
-            setFirstValue(values[0]);
-            setSecondValue(values[1]);
-            setThirdValue(values[2]);
+        await API.get('/aboutus').then((response)=> {
+            setValues(response.data)
         }).catch((error)=> {
             console.log(error);
         })
@@ -52,33 +47,19 @@ export default function AboutUs() {
             </TopAboutUsContainer>
 
             <ValuesAboutUsContainer>
+                {
+                    values.map((value, index) => {
+                        return(
+                            <div key={index} className={ index === 1 ? "mid-values" : ""} >
+                                <img src={images[index]} alt="Icons" />
 
-                <div>
-                    <img src={diversity} alt="Diversity Icon" />
+                                <p className="title">{value.Title}</p>
 
-                    <p className="title">{firstValue.Title}</p>
-
-                    <p className="description">{firstValue.Description}</p>
-                </div>
-
-                <div className="mid-values">
-                    <img src={deployment} alt="" />
-
-                    <p className="title">{secondValue.Title}</p>
-
-                    <p className="description">{secondValue.Description}</p>
-
-                </div>
-
-                <div>
-                    <img src={teaching} alt="Teaching Icon" />
-
-                    <p className="title">{thirdValue.Title}</p>
-
-                    <p className="description">{secondValue.Description}</p>
-
-                </div>
-
+                                <p className="description">{value.Description}</p>
+                            </div>
+                        );
+                    })
+                }
             </ValuesAboutUsContainer>
         </AboutUsContainer>
 

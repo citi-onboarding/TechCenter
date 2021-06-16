@@ -1,27 +1,36 @@
-import react from 'react';
+import react, { useEffect } from 'react';
+import Slider from "react-slick";
+import './changeCarousel.css';
+import CarouselItem from '../../EventCarouselItem';
+import API from '../../../services/API';
 import {
     EventContainer,
     EventTopContainer,
     EventCarousel,
     EventCarouselContaier
 } from './styles';
-import CarouselItem from '../../EventCarouselItem';
-import Slider from "react-slick";
-import './testando.css';
-import Arrow from '../../Arrow';
+
+import {
+    mainCarouselSettings
+} from './CarouselSettings.js';
 
 export default function Event() {
 
-    const carouselSettings = {
-        dots: true,
-        inifite: true,
-        speed: 500,
-        slidesToShow: 3.5,
-        slidesToScroll: 1,
-        nextArrow: <Arrow direction="left"/>,
-        prevArrow: <Arrow direction="right"/>,
-        centerMode: true
+    async function getEvents(){
+        await API.get('/events').then((response) => {
+            console.log(response.data[0]);
+            const {Image,Link,Date,Tile, Description,} = response.data[0];
+            console.log(Image[0]);
+            const {url} = Image[0];
+            console.log(url);
+        }).catch((error) => {
+            console.log(error);
+        })
     }
+
+    useEffect(() => {
+        getEvents();
+    },[])
 
     return (
 
@@ -45,7 +54,7 @@ export default function Event() {
             <EventCarouselContaier>
 
             <EventCarousel>
-                <Slider {...carouselSettings}>
+                <Slider {...mainCarouselSettings}>
                     <CarouselItem image="https://i.pinimg.com/originals/1e/06/e1/1e06e107f0ca520aed316957b685ef5c.jpg"/>
                     <CarouselItem image="https://i.pinimg.com/originals/de/f6/96/def69643889ee29e232637646e839064.jpg"/>
                     <CarouselItem image="https://portalfotografianapratica.com/wp-content/uploads/2019/09/miniatura-01-730x410.jpg"/>
