@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {
     PartnershipContainer,
     Partnerships,
-    PartnershipsInformation
+    PartnershipsInformation,
+    PartnershipsImages
 } from './styles.js';
 
 import API from '../../../services/API.js';
@@ -32,14 +33,34 @@ export default function PartnershipsSection(){
     },[])
 
     return(
-        <PartnershipContainer>
+        <PartnershipContainer className={ partnerships.length >= 6 ? "mid-height": ""}>
             <Partnerships>
+                <PartnershipsImages>
 
+                    {
+                        partnerships.map((partnership, index) => {
+                            return(
+                                <Partnership key={index} partnership={partnership}
+                                    className = {index > 5 ? "second-layer" : ""}
+                                /> 
+                            ); 
+                        })
+                    }
+
+                </PartnershipsImages>
+
+                <PartnershipsInformation className={ partnerships.length >= 6 ? "mid-height": ""}>
+
+                    <p>
+                        Apoiadores
+                    </p>
+
+                    <p className="company">
+                        Tech Center
+                    </p>
+
+                </PartnershipsInformation>
             </Partnerships>
-
-            <PartnershipsInformation>
-                
-            </PartnershipsInformation>
         </PartnershipContainer>
     );
 }

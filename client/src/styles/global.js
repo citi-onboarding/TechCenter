@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         --BUTTON-SLICK: #FFFFFF;
         --ARROW-COLOR: #262626;
         --BORDER-ARROW-COLOR: #D9D9D9;
+        --BACKGROUND-PARTNERSHIPS-SECTION: #F4F4F4;
     }
 
     * {

@@ -4,10 +4,11 @@ import {
     PartnershipContainer
 } from './styles.js';
 
-export default function Partnership(){
+export default function Partnership({partnership, className}){
     return(
-        <PartnershipContainer>
-            
-        </PartnershipContainer>
+        <PartnershipContainer 
+            url = {partnership.Image.url}
+            className={className}
+        />
     );
 }
