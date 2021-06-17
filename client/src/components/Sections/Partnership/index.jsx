@@ -49,7 +49,7 @@ export default function PartnershipsSection(){
 
                 </PartnershipsImages>
 
-                <PartnershipsInformation className={ partnerships.length >= 6 ? "mid-height": ""}>
+                <PartnershipsInformation>
 
                     <p>
                         Apoiadores
