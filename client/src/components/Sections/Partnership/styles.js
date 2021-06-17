@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const PartnershipContainer = styled.div`
     width: 100%;
-    height: 18rem;
+    height: 16rem;
     background: var(--BACKGROUND-PARTNERSHIPS-SECTION);
     padding: 3rem 0 0 0;
 
@@ -35,12 +35,6 @@ export const PartnershipsInformation = styled.div`
     text-align: right;
     color: var(--BLACK);
     background: var(--BACKGROUND-PARTNERSHIPS-SECTION);
-
-    p {
-        &.partnership{
-            margin-top: 2rem;
-        }
-    }
 
 `
 

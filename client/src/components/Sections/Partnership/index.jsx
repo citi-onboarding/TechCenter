@@ -14,6 +14,7 @@ export default function PartnershipsSection(){
     const [partnerships, setPartnerships] = useState([]);
 
     async function getPartrnerships(){
+
         await API.get('/partnerships').then((response) => {
             let amountOfPartnership = []
             response.data.forEach((partnership) => {
@@ -41,6 +42,7 @@ export default function PartnershipsSection(){
                         partnerships.map((partnership, index) => {
                             return(
                                 <Partnership key={index} partnership={partnership}
+                                className={ partnerships.length <= 5 ? "margin-mid-partnerships" : ""}
                                 /> 
                             ); 
                         })
@@ -50,7 +52,7 @@ export default function PartnershipsSection(){
 
                 <PartnershipsInformation>
 
-                    <p className="partnership">
+                    <p>
                         Apoiadores
                     </p>
 

@@ -9,4 +9,9 @@ export const PartnershipContainer = styled.div`
     background-image: ${({ url }) => `url(${url})`};
     background-size: cover;
     background-position: center;
+
+    &.margin-mid-partnerships{
+        margin: 1rem auto 1rem 0;
+    }
+
 `
