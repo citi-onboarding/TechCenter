@@ -9,6 +9,14 @@ export const GlobalStyle = createGlobalStyle`
         --SECOND-PRIMARY-COLOR: #FAC747;
         --COLOR-TEXT: #F4F4F4;
         --BUTTON-TEXT-COLOR: #1B284C;
+        --WHITE-BACKGROUND: #E5E5E5;
+        --BLACK: #000000;
+        --CIRCLE-SLICK-WITHOUT-HIGHLIGHT: #898C8F;
+        --CIRCLE-SLICK-IN-HIGHTLIGHT:#E0E0E0;
+        --BUTTON-SLICK: #FFFFFF;
+        --ARROW-COLOR: #262626;
+        --BORDER-ARROW-COLOR: #D9D9D9;
+        --BACKGROUND-PARTNERSHIPS-SECTION: #F4F4F4;
     }
 
     * {
@@ -32,5 +40,6 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-weight: normal;
         color: var(--COLOR-TEXT);
+        background: var(--WHITE-BACKGROUND);
     }
 `

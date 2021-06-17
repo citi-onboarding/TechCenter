@@ -1,0 +1,32 @@
+.slick-next {
+    top: -9rem;
+    left: 3rem;
+}
+
+.slick-prev {
+    top: -9rem;
+    left: 0rem;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size: 0;
+}
+
+.slick-dots {
+    bottom: -4.5rem;
+}
+
+.slick-dots li button:before{
+    font-size: 1.4rem;
+}
+
+.slick-dots li button:before,.slick-dots li button  {
+    color: var(--CIRCLE-SLICK-IN-HIGHTLIGHT);
+    opacity: 0.9;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--CIRCLE-SLICK-WITHOUT-HIGHLIGHT);
+    opacity: 0.9;
+
+}
