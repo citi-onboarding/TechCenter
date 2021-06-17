@@ -3,7 +3,10 @@ const keystone = require('keystone');
 const { Types } = keystone.Field;
 
 const Event = new keystone.List('Events', {
-    defaultColumns: 'Title, Description, Date'
+    defaultColumns: 'Title, Description, Date, Hour, Link',
+    map: {
+        name: "Title"
+    }
 })
 
 Event.add({
@@ -30,6 +33,12 @@ Event.add({
         require: true,
         initial: true,
         label: "Data"
+    },
+    Hour: {
+        type: Types.Text,
+        require: true,
+        initial: true,
+        label: "Horário entre 00:00 e 23:59"
     },
     Link: {
         type: Types.Text,
