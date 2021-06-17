@@ -33,7 +33,7 @@ export default function PartnershipsSection(){
     },[])
 
     return(
-        <PartnershipContainer className={ partnerships.length >= 6 ? "mid-height": ""}>
+        <PartnershipContainer className={ partnerships.length <= 6 ? "mid-partnerships" : "" }>
             <Partnerships>
                 <PartnershipsImages>
 
@@ -41,7 +41,6 @@ export default function PartnershipsSection(){
                         partnerships.map((partnership, index) => {
                             return(
                                 <Partnership key={index} partnership={partnership}
-                                    className = {index > 5 ? "second-layer" : ""}
                                 /> 
                             ); 
                         })
@@ -51,11 +50,11 @@ export default function PartnershipsSection(){
 
                 <PartnershipsInformation>
 
-                    <p>
+                    <p className="partnership">
                         Apoiadores
                     </p>
 
-                    <p className="company">
+                    <p>
                         Tech Center
                     </p>
 

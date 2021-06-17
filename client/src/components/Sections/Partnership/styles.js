@@ -6,10 +6,14 @@ export const PartnershipContainer = styled.div`
     height: 18rem;
     background: var(--BACKGROUND-PARTNERSHIPS-SECTION);
     padding: 3rem 0 0 0;
+
+    &.mid-partnerships {
+        height: 11rem;
+    }
 `
 
 export const Partnerships = styled.div`
-    height: 90%;
+    background: var(--BACKGROUND-PARTNERSHIPS-SECTION);
     width: 85%;
 
     margin: 0 auto;
@@ -32,10 +36,16 @@ export const PartnershipsInformation = styled.div`
     color: var(--BLACK);
     background: var(--BACKGROUND-PARTNERSHIPS-SECTION);
 
+    p {
+        &.partnership{
+            margin-top: 2rem;
+        }
+    }
+
 `
 
 export const PartnershipsImages = styled.div`
-    height: 90%;
+    max-height: 90%;
     background: red;
 
     display: flex;
