@@ -1,5 +1,5 @@
 const constants = {
-    NUMBER_OF_PARTNERS : 12
+    NUMBER_OF_PARTNERS : 12,
 }
 
 module.exports = constants

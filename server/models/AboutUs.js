@@ -6,7 +6,10 @@ const About = new keystone.List('Abouts', {
     autocreate: true,
     nocreate: true,
     nodelete: true,
-    defaultColumns: 'Title, Description'
+    defaultColumns: 'Title, Description',
+    map : {
+        name: 'Title'
+    }
 });
 
 About.add({

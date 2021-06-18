@@ -14,10 +14,13 @@ export default function InitialSection() {
 
     const [description, setDescription] = useState('');
 
-    async function getDescription() {
-        API.get('/first-text').then((response) => {
-            const { Text } = response.data[0];
+
+    async function getDescription(){
+        await API.get('/first-text').then((response) => {
+            const {Text} = response.data[0];
             setDescription(Text);
+        }).catch((error) => {
+            console.log(error);
         })
     }
 

@@ -6,10 +6,19 @@ const SocialMedia = new keystone.List('Social Media', {
     autocreate: true,
     nocreate: true,
     nodelete: true,
-    defaultColumns: 'Instagram, Medium, Youtube, Discord'
+    defaultColumns: 'Company, Instagram, Medium, Youtube, Discord',
+    map : {
+        name: "Company"
+    }
 });
 
 SocialMedia.add({
+    Company: {
+        type: Types.Text,
+        initial: true,
+        require: false,
+        label: "Empresa",
+    },
     Instagram: {
         type: Types.Text,
         initial: true,
