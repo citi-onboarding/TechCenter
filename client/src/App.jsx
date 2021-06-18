@@ -4,6 +4,7 @@ import FeedBackSection from "./components/Sections/FeedBackSection";
 import { GlobalStyle } from "./styles/global.js";
 import InitialSection from "./components/Sections/InitialSection";
 import Partnerships from "./components/Sections/Partnership";
+import Footer from "./components/Sections/Footer";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <AboutUs/>
       <FeedBackSection />
       <Partnerships/>
+      <Footer/>
     </>
   );
 }
