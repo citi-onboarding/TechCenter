@@ -7,6 +7,7 @@ const eventController = require('../controllers/EventController');
 const partnershipsController = require('../controllers/PartnershipsController');
 const firstTextController = require("../controllers/SecOneTextController");
 const aboutUs = require('../controllers/AboutUsController');
+const contactImage = require('../controllers/ContactImageController');
 const contact = require('../controllers/ContactController');
 
 
@@ -42,6 +43,10 @@ module.exports = (app) => {
   });
 
   app.get('/api/contact-image', (request, response) => {
-    contact.getImagesContact(request, response)
+    contactImage.getImagesContact(request, response)
+  })
+
+  app.get('/api/contact-text', (request, response) => {
+    contact.getTextContact(request, response)
   })
 };

@@ -1,9 +1,9 @@
 
 const keystone = require('keystone');
-const Contact = keystone.list('Contact');
+const ContactImage = keystone.list('Contact Image');
 
-exports.getTextContact = (request, response) => {
-    Contact.model.find((err, data) => {
+exports.getImagesContact = (request, response) => {
+    ContactImage.model.find((err, data) => {
         if (err) {
             response.status(500).send('DB Error');
         } else {
