@@ -16,7 +16,9 @@ const referenceOfMounths = {
 }
 export const ConvertDateTime = (dateTime, reference = referenceOfMounths) => {
     const date = dateFormat(dateTime).toString();
-    const [dayOfWeek, mounth, day, year, timeDateWasPut] = date.split(' ');
-    return `${day} de ${reference[mounth]} às`
+    const [dayOfWeek, mounth, day, year, time] = date.split(' ');
+    let timeSplitted = time.split(':');
+    timeSplitted = timeSplitted.slice(0,2)
+    return `${day} de ${reference[mounth]} às ${timeSplitted.join(':')}`
 }
 
