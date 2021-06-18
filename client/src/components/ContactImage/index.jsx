@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 import {
@@ -9,8 +9,30 @@ import {
 
 import legos from '../../assets/legosContact.svg';
 import ImageContact from '../ImageContact';
+import API from '../../services/API';
 
 export default function ContactImage() {
+
+    const [images, setImages] = useState([]);
+
+
+    async function getImages(){
+        await API.get('/contact-image').then((response) => {
+            let amountOfImages = []
+            response.data.forEach((image) => {
+                image.Image = image.Image[0]
+                amountOfImages.push(image);
+            })
+            setImages(amountOfImages);
+        }).catch((error) => {
+            console.log(error);
+        })
+    }
+
+    useEffect(() => {
+        getImages();
+    },[])
+
     return (
 
         <ContactImageContainer>
@@ -18,8 +40,13 @@ export default function ContactImage() {
                 <img src={legos} alt="Legos" />
 
                 <ContactImageContentImage>
-                    <ImageContact url="https://s2.glbimg.com/QqEDyJyWVPTI9tU-5izKpJls6UE=/620x520/smart/e.glbimg.com/og/ed/f/original/2020/11/30/baby-yoda.jpg" />
-                    <ImageContact url="https://s2.glbimg.com/QqEDyJyWVPTI9tU-5izKpJls6UE=/620x520/smart/e.glbimg.com/og/ed/f/original/2020/11/30/baby-yoda.jpg" />
+                    {
+                        images.map((image, index) => {
+                            return(
+                                <ImageContact url = {image.Image.url}/>
+                            ); 
+                        })
+                    }
                 </ContactImageContentImage>
             </ContactImageContent>
         </ContactImageContainer>
