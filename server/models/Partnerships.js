@@ -6,26 +6,33 @@ const Partnership = new keystone.List('Partnership', {
     autocreate: true,
     nocreate: true,
     nodelete: true,
-    defaultColumns: 'Imagem, Name, Link, Show'
+    defaultColumns: 'Name, Link, Show',
+    map: {
+        name: "Name"
+    }
 });
 
 Partnership.add({
     Image: {
         type: Types.CloudinaryImages,
         initial: true,
-        require: true
+        require: true,
+        label: "Imagem"
     },
     Name: {
         type: Types.Text,
         require: true,
         initial: true,
+        label: "Nome"
     },
     Link: {
         type: Types.Text,
         initial: true,
+        label: "Link"
     },
     Show: {
-        type: Types.Boolean
+        type: Types.Boolean,
+        label: "Mostrar"
     }
 })
 
