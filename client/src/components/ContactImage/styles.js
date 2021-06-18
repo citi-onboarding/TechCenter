@@ -18,8 +18,9 @@ export const ContactImageContent = styled.div`
 
     img {
         margin-top: 3rem;
-        width: 30rem;
-        height: 23rem;
+        margin-left: 5rem;
+        width: 28rem;
+        height: 25rem;
     }
 
 
