@@ -7,9 +7,8 @@ const FirstText = new keystone.List('Texto Inicial', {
     nocreate: true,
     nodelete: true,
     defaultColumns: 'Text',
-    map: {
-        name: "Text"
-    }
+    label:"Texto Inicial",
+    map: { name: "Text" }
 }
 );
 

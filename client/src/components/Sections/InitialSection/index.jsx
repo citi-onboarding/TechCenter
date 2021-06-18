@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react'; 
 import {
     InitialSectionContainer,
-    InitialSectionTextContainer,
-    InitialSectionImageContainer
+    InitialSectionImageContainer,
+    InitialSectionTextContainer
 } from './styles.js';
-import logoTechCenter from '../../../assets/logoTechCenter.svg';
-import ButtonTechCenter from '../../Button/index.jsx';
-import API from '../../../services/API';
+import React, { useEffect, useState } from 'react';
 
-export default function InitialSection(){
+import API from '../../../services/API';
+import ButtonTechCenter from '../../Button/index.jsx';
+import Navbar from '../../Navbar/index.jsx';
+import logoTechCenter from '../../../assets/logoTechCenter.svg';
+
+export default function InitialSection() {
 
     const [description, setDescription] = useState('');
+
 
     async function getDescription(){
         await API.get('/first-text').then((response) => {
@@ -25,21 +28,24 @@ export default function InitialSection(){
         getDescription()
     }, [])
 
-    return(
-        <InitialSectionContainer>
-            <InitialSectionTextContainer>
-                <p className= "title">
-                    Onde tudo se conceta e você evolui
+    return (
+        <React.Fragment>
+            <InitialSectionContainer>
+                <InitialSectionTextContainer>
+                    <p className="title">
+                        Onde tudo se conceta e você evolui
                 </p>
-                <p className="description"> {description}
-                </p>
+                    <p className="description"> {description}
+                    </p>
 
-                <ButtonTechCenter className="join-to-community" description="Entrar na comunidade"/>
-            </InitialSectionTextContainer>
+                    <ButtonTechCenter className="join-to-community" description="Entrar na comunidade" />
+                </InitialSectionTextContainer>
 
-            <InitialSectionImageContainer>
-                <img src={logoTechCenter} alt="Logo TechCenter" />
-            </InitialSectionImageContainer>
-        </InitialSectionContainer>
+                <InitialSectionImageContainer>
+                    <img src={logoTechCenter} alt="Logo TechCenter" />
+                </InitialSectionImageContainer>
+            </InitialSectionContainer>
+            <Navbar />
+        </React.Fragment>
     );
 }
