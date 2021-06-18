@@ -22,30 +22,23 @@ Event.add({
         initial: true,
         label: "Título"
     },
-    Description: {
+    Description: { 
         type: Types.Text,
         require: true,
         initial: true,
         label: "Descrição"
     },
     Date: {
-        type: Types.Date,
+        type: Types.Datetime,
         require: true,
         initial: true,
-        label: "Data"
-    },
-    Hour: {
-        type: Types.Text,
-        require: true,
-        initial: true,
-        label: "Horário entre 00:00 e 23:59"
+        label: "Data e Horário"
     },
     Link: {
         type: Types.Text,
         require: true,
         initial: true,
     }
-
 })
 
 Event.register();
