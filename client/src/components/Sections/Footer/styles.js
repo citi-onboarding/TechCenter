@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
 
+    padding-top: 2rem;
+
     width: 100%;
     height: 28rem;
 
