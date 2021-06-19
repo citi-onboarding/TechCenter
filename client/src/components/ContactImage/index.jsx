@@ -43,7 +43,7 @@ export default function ContactImage() {
                     {
                         images.map((image, index) => {
                             return(
-                                <ImageContact url = {image.Image.url}/>
+                                <ImageContact url = {image.Image.url} key={index}/>
                             ); 
                         })
                     }
