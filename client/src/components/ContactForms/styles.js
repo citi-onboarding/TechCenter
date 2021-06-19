@@ -65,6 +65,21 @@ export const ContactFormsContent = styled.div`
         justify-content: flex-start;
         align-items: flex-start;
 
+        div {
+            margin: 2rem auto;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                margin-left: 3rem;
+                font-weight: bold;
+                color: var(--FIRST-PRIMARY-COLOR); 
+                width: 40rem;
+            }
+        }
+
 
         input {
             outline: none;
@@ -87,19 +102,23 @@ export const ContactFormsContent = styled.div`
         }
 
         button {
+            cursor: pointer;
             padding: 1.5rem 3rem;
-            margin-top: 2.5rem;
             align-self: flex-end;
 
             border-radius: 4.19px;
 
-            margin-right: 4rem;
             border: none;
 
             color: var(--COLOR-TEXT);
             font-weight: bold;
 
             background-color: var(--FIRST-PRIMARY-COLOR);
+
+            :hover {
+                background-color: var(--SECOND-PRIMARY-COLOR);
+                color:  var(--FIRST-PRIMARY-COLOR);
+            }
         }
     }
 `
