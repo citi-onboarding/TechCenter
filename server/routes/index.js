@@ -9,6 +9,7 @@ const firstTextController = require("../controllers/SecOneTextController");
 const aboutUs = require('../controllers/AboutUsController');
 const contactImage = require('../controllers/ContactImageController');
 const contact = require('../controllers/ContactController');
+const mail = require('../controllers/MailController');
 
 
 module.exports = (app) => {
@@ -48,5 +49,9 @@ module.exports = (app) => {
 
   app.get('/api/contact-text', (request, response) => {
     contact.getTextContact(request, response)
+  })
+
+  app.post('/api/contact', (request, response) => {
+    mail(request, response)
   })
 };
