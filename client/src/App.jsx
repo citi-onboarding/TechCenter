@@ -18,8 +18,8 @@ function App() {
       <AboutUs/>
       <FeedBackSection />
       <Partnerships/>
-      <Footer/>
       <Contact/>
+      <Footer/>
     </>
   );
 }

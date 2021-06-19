@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const ContactImageContainer = styled.header`
     width: 100%;
-    height: 30rem;
+    height: 40rem;
 `
 
 export const ContactImageContent = styled.div`
@@ -19,8 +19,8 @@ export const ContactImageContent = styled.div`
     img {
         margin-top: 3rem;
         margin-left: 5rem;
-        width: 28rem;
-        height: 25rem;
+        width: 30rem;
+        height: 27rem;
     }
 
 
