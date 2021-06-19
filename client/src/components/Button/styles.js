@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const ButtonContainer = styled.div`
 
     button {
+        cursor: pointer;
         
         padding: 1.8rem 1.3rem;
         outline: none;

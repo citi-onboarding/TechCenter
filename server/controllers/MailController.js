@@ -19,13 +19,12 @@ const sendMail = async (request, response, next) => {
         });
 
         response.status(200).send({
-            answer: "Enviado"
+            answer: "Enviado. Agradecemos seu contato!"
         });
     } catch (error){
         response.status(500).send({
-            answer: "Desculpe. Houve alguma falha no envio"
+            answer: "Desculpe. Houve alguma falha no envio!"
         });
-        console.log(error)
     }
 }
 
