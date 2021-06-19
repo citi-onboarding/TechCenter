@@ -17,6 +17,8 @@ export const GlobalStyle = createGlobalStyle`
         --ARROW-COLOR: #262626;
         --BORDER-ARROW-COLOR: #D9D9D9;
         --BACKGROUND-PARTNERSHIPS-SECTION: #F4F4F4;
+        --BORDER-CONTACT-SECTION: #F4F4F4;
+        --LINE-INPUT: #999999;
     }
 
     * {

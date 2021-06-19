@@ -6,7 +6,7 @@ export const FooterContainer = styled.div`
     padding-top: 2rem;
 
     width: 100%;
-    height: 28rem;
+    height: 24rem;
 
     background: var(--SECOND-PRIMARY-COLOR);
 
@@ -25,7 +25,7 @@ export const FooterContent = styled.div`
 
     img {
         width: 32rem;
-        height: 28rem;
+        height: 24rem;
     }
 
     div {
@@ -44,10 +44,10 @@ export const FooterContent = styled.div`
 
 `
 export const FooterSocialMedia = styled.header`
-    height: 18rem;
+    height: 16rem;
     background: var(--SECOND-PRIMARY-COLOR);
 
-    margin-top: 9rem;
+    margin-top: 7.5rem;
 
     display: flex;
     flex-direction: column;
