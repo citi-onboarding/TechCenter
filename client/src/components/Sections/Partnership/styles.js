@@ -8,7 +8,7 @@ export const PartnershipContainer = styled.div`
     padding: 3rem 0 0 0;
 
     &.mid-partnerships {
-        height: 11rem;
+        height: 12rem;
     }
 `
 
@@ -23,7 +23,7 @@ export const Partnerships = styled.div`
 ` 
 
 export const PartnershipsInformation = styled.div`
-    height: 90%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,12 +39,18 @@ export const PartnershipsInformation = styled.div`
 `
 
 export const PartnershipsImages = styled.div`
-    max-height: 90%;
-    background: red;
+    height: 15rem;
+    width: 80%;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     background: var(--BACKGROUND-PARTNERSHIPS-SECTION);
+
+    &.mid-partnerships {
+        flex-direction: row;
+        height: 12rem;
+        width: 90%;
+    }
 
 `

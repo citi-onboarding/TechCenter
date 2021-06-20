@@ -36,13 +36,13 @@ export default function PartnershipsSection(){
     return(
         <PartnershipContainer className={ partnerships.length <= 6 ? "mid-partnerships" : "" }>
             <Partnerships>
-                <PartnershipsImages>
+                <PartnershipsImages className={ partnerships.length <= 6 ? "mid-partnerships" : "" }>
 
                     {
                         partnerships.map((partnership, index) => {
                             return(
                                 <Partnership key={index} partnership={partnership}
-                                className={ partnerships.length <= 5 ? "margin-mid-partnerships" : ""}
+                                className={ partnerships.length <= 6 ? "margin-mid-partnerships" : ""}
                                 /> 
                             ); 
                         })
