@@ -67,7 +67,28 @@ export const TopAboutUsContainer = styled.div`
             }
 
         }
-    }    
+    }
+    
+    @media (max-width: 426px){
+
+        height: 35%;
+
+        img {
+            display: none;
+        }
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+
+        margin-bottom: 8rem;
+
+        div {
+            &.mid-top-about-us{
+                margin-top: 2rem;
+            }
+        }
+    }
 `
 
 export const ValuesAboutUsContainer = styled.div`
@@ -102,7 +123,7 @@ export const ValuesAboutUsContainer = styled.div`
             width: 36rem;
 
             &.title {
-                
+                width: max-content ;
                 margin-top: 2rem;
                 font-size: 2rem;
                 font-weight: 700;
@@ -121,6 +142,72 @@ export const ValuesAboutUsContainer = styled.div`
             color: var(--FIRST-PRIMARY-COLOR);
             box-shadow: none;
             box-shadow: inset 0px 5px 2px -2px gray;
+        }
+    }
+
+    @media(max-width: 426px){
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100rem;
+
+        div {
+
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 8rem 8rem;
+
+            box-shadow: none;
+
+            img {
+                width: 7rem;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                justify-self: center;
+
+                
+            }
+
+            img path {
+                fill: #F4F4F4;
+            }
+
+            p {
+                &.title, &.description {
+                    margin-top: 0;
+                    word-break: break-all;
+                }
+
+                &.title {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+                    border-bottom: 2px solid #F4F4F4;
+
+                    align-self: center;
+                    text-align: left;
+                }
+
+                &.description {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    text-align: left;
+                    align-self: flex-start;
+
+                }
+
+            }
+
+            &.mid-values{
+                background: var(--FIRST-PRIMARY-COLOR);
+                color: var(--WHITE-BACKGROUND);
+            }
         }
     }
 `
