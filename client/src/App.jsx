@@ -1,4 +1,5 @@
 import AboutUs from "./components/Sections/AboutUs";
+import ArticleSection from "./components/Sections/ArticlesSection";
 import Event from "./components/Sections/Event";
 import FeedBackSection from "./components/Sections/FeedBackSection";
 import { GlobalStyle } from "./styles/global.js";
@@ -10,12 +11,13 @@ function App() {
   return (
 
     <>
-      <GlobalStyle/>
-      <InitialSection/>
-      <Event/>
-      <AboutUs/>
+      <GlobalStyle />
+      <InitialSection />
+      <Event />
+      <AboutUs />
       <FeedBackSection />
-      <Partnerships/>
+      <Partnerships />
+      <ArticleSection />
     </>
   );
 }

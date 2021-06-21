@@ -1,20 +1,20 @@
-import react, { useEffect, useState } from 'react';
-import Slider from "react-slick";
 import './changeCarousel.css';
-import EventCarouselItem from '../../EventCarouselItem';
-import API from '../../../services/API';
-import {
-    EventContainer,
-    EventTopContainer,
-    EventCarousel,
-    EventCarouselContaier
-} from './styles';
 
+import {
+    EventCarousel,
+    EventCarouselContaier,
+    EventContainer,
+    EventTopContainer
+} from './styles';
+import react, { useEffect, useState } from 'react';
+
+import API from '../../../services/API';
+import { ConvertDateTime } from './ConvertDateTime';
+import EventCarouselItem from '../../EventCarouselItem';
+import Slider from "react-slick";
 import {
     mainCarouselSettings
 } from './CarouselSettings.js';
-
-import { ConvertDateTime } from './ConvertDateTime';
 
 export default function Event() {
 

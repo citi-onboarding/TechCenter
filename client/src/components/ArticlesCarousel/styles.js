@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div`    
     & > div{
         height: auto;
         &:first-of-type(button){ display: none; }
@@ -12,10 +12,31 @@ export const Container = styled.div`
         height: 5rem;
     }
 
+    background: linear-gradient(
+    to bottom, 
+    white 0%, 
+    white 50%, 
+    var(--BUTTON-TEXT-COLOR) 50%, 
+    var(--BUTTON-TEXT-COLOR) 100%
+    );
+
+`
+
+export const UpperWrapper = styled.span`
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    .right-text{
+        color: black;
+        width: 40ch;
+        margin: auto 0rem;
+    }
 `
 
 export const ButtonWrapper = styled.div`
     height: 30vh;
+    width: 20vw;
 
     padding-left: 5vw;
     padding-bottom: 5vh;
@@ -29,6 +50,10 @@ export const ButtonWrapper = styled.div`
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
+
+    hr{
+        width: 25rem;
+    }
 
     button{
         width: 32px;
@@ -45,4 +70,6 @@ export const ButtonWrapper = styled.div`
         }
     }
 `
+
+
 

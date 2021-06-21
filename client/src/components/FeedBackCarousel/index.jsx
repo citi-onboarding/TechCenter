@@ -1,3 +1,5 @@
+import "./styles.css"
+
 import { ButtonWrapper, Container } from "./styles.js";
 import React, { useEffect, useState } from 'react'
 
@@ -21,16 +23,16 @@ export default function FeedBackCarousel() {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 1000,
+        speed: 100,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
@@ -39,7 +41,7 @@ export default function FeedBackCarousel() {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                     initialSlide: 2
                 }
             },
