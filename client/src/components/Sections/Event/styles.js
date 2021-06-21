@@ -15,6 +15,14 @@ export const EventContainer = styled.header`
         height: 480px;
     }
 
+    @media (min-width: 822px) and (max-width: 989px) {
+        height: 430px;
+    }
+
+    @media(min-width: 426px) and (max-width: 822px){
+        height: 310px;
+
+    }
 `
 
 export const EventTopContainer = styled.div`
@@ -69,6 +77,10 @@ export const EventCarousel = styled.div`
 
     @media (min-width: 990px) and (max-width: 1099px){
         bottom: 6.5rem;
+    }
+
+    @media (min-width: 822px) and (max-width: 989px) {
+        bottom: 12rem;
     }
 `
 

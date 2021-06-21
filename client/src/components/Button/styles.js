@@ -32,7 +32,7 @@ export const ButtonContainer = styled.div`
         }
     }
 
-    @media (min-width: 990px) and (max-width: 1099px){
+    @media (min-width: 427px) and (max-width: 1099px){
 
         button {
             font-size: 1.4rem;
@@ -44,5 +44,4 @@ export const ButtonContainer = styled.div`
 
         }
     }
-
 `
