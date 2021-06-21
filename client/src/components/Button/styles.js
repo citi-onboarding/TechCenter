@@ -19,8 +19,28 @@ export const ButtonContainer = styled.div`
             background: var(--SECOND-PRIMARY-COLOR);
             color: var(--FIRST-PRIMARY-COLOR)
         }
+    }
 
-        &.know-more{
+    @media (min-width: 1100px) and (max-width: 1250px){
+
+        button {
+            
+            &.join-to-community {
+                width: 19rem;
+            }
+
+        }
+    }
+
+    @media (min-width: 990px) and (max-width: 1099px){
+
+        button {
+            font-size: 1.4rem;
+            
+            &.join-to-community {
+                width: 19rem;
+            
+            }
 
         }
     }

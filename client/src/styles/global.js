@@ -46,4 +46,16 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--COLOR-TEXT);
         background: var(--WHITE-BACKGROUND);
     }
+
+    @media (min-width: 1100px) and (max-width: 1250px){
+        html {
+            font-size: 55%;
+        }
+    }
+
+    @media (min-width: 990px) and (max-width: 1099px){
+        html {
+            font-size: 50%;
+        }
+    }
 `

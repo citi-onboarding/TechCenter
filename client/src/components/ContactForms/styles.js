@@ -28,7 +28,7 @@ export const ContactInformation = styled.div`
             font-size: 1.4rem;
 
             position: relative;
-            right: 6.5rem;
+            right: 3.6rem;
 
             margin-bottom: 2rem;
 
@@ -38,6 +38,14 @@ export const ContactInformation = styled.div`
     div {
         display: flex;
         justify-content: flex-end;
+    }
+
+    @media (min-width: 1100px) and (max-width: 1250px){
+        p {
+            &.information { 
+            right: 4.2rem;
+            }
+        }
     }
 `
 

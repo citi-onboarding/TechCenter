@@ -28,5 +28,5 @@
 .slick-dots li.slick-active button:before {
     color: var(--CIRCLE-SLICK-WITHOUT-HIGHLIGHT);
     opacity: 0.9;
-
 }
+
