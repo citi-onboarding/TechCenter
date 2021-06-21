@@ -26,6 +26,11 @@ export const EventCarouselItemContainer = styled.header`
         height: 20rem;
     }
 
+    @media(max-width: 426px){
+        width: 16rem;
+        height:  24rem;
+    }
+
 `
 
 export const EventCarouselItemContainerImage = styled.div`
@@ -37,6 +42,10 @@ export const EventCarouselItemContainerImage = styled.div`
 
     @media (min-width:427px) and (max-width: 635px) {
         width: 20rem;
+    }
+
+    @media(max-width: 426px){
+        width: 16rem;
     }
 `
 
@@ -74,6 +83,20 @@ export const EventCarouselItemContainerInformation = styled.div`
                 font-size: 1.4rem;
             }
 
+        }
+    }
+
+    @media(max-width: 426px){
+        width: 20rem;
+        margin-left: 1rem;
+        p {
+            &.description, &.date {
+                font-size: 1.0rem;
+            }
+            
+            &.title {
+                font-size: 1.2rem;
+            }
         }
     }
 `

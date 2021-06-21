@@ -53,6 +53,12 @@ export const ArrowContainer = styled.div`
         }
 
     }
+
+    @media (max-width: 426px){
+        &.right, &.left {
+            display: none;
+        }
+    }
 `
 
 export const ArrowStyle = {
