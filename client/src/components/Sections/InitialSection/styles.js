@@ -11,6 +11,10 @@ export const InitialSectionContainer = styled.header`
     width: 100%;
 
     background: var(--FIRST-PRIMARY-COLOR);
+
+    @media(max-width: 425px) {
+        height: 55rem;
+    }
 `
 
 export const InitialSectionTextContainer = styled.div`
@@ -30,6 +34,28 @@ export const InitialSectionTextContainer = styled.div`
             margin-bottom: 3rem;
         }
     }
+
+    @media(max-width: 425px){
+        margin-left: 5rem;
+        width: 60%;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+
+            &.title {
+                font-size: 2rem;
+            }
+
+            &.description {
+                font-size: 1.2rem;
+                width: 24rem;
+            }
+        }
+    }
 `
 
 export const InitialSectionImageContainer = styled.div`
@@ -39,5 +65,22 @@ export const InitialSectionImageContainer = styled.div`
     img {
         width: 37rem;
         margin-left: 3rem;
+    }
+
+    @media(max-width: 425px){
+        width: 40%;
+
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+
+        margin-bottom: 0rem;
+        padding-left: 1.5rem;
+
+
+        img {
+            width: 20rem;
+            overflow: hidden;
+        }
     }
 `

@@ -33,8 +33,8 @@ export default function InitialSection() {
             <InitialSectionContainer>
                 <InitialSectionTextContainer>
                     <p className="title">
-                        Onde tudo se conceta e você evolui
-                </p>
+                        Onde tudo se {window.innerWidth <= 425 ? <br/> : ""} conceta e você evolui
+                    </p>
                     <p className="description"> {description}
                     </p>
 
