@@ -13,6 +13,10 @@ export const ContactInformation = styled.div`
 
     border-top: 7px solid var(--BORDER-CONTACT-SECTION);
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
     p {
         text-align: right;
 
@@ -26,9 +30,6 @@ export const ContactInformation = styled.div`
             width: 28rem;
             height: 6rem;
             font-size: 1.4rem;
-
-            position: relative;
-            right: 6.5rem;
 
             margin-bottom: 2rem;
 
@@ -118,6 +119,26 @@ export const ContactFormsContent = styled.div`
             :hover {
                 background-color: var(--SECOND-PRIMARY-COLOR);
                 color:  var(--FIRST-PRIMARY-COLOR);
+            }
+        }
+    }
+
+    @media (min-width: 822px) and (max-width: 989px){
+
+        form {
+            width: 70rem;
+            height: 30rem;
+        }
+    }
+
+    @media (min-width: 427px) and (max-width: 821px){
+
+        form {
+            width: 80rem;
+            height: 32rem;
+
+            button {
+                font-size: 1.5rem;
             }
         }
     }

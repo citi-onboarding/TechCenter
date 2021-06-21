@@ -104,7 +104,6 @@ export default function ContactForms() {
                     <p className= "information">{text}</p>
 
                     <div>
-
                         <ButtonTechCenter className="join-to-community" description="Entre na comunidade" />
                     </div>
                 </ContactInformation>

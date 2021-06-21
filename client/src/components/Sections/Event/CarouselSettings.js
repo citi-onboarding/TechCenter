@@ -10,3 +10,14 @@ export const mainCarouselSettings = {
     prevArrow: <Arrow direction="right"/>,
     centerMode: true
 }
+
+export const CarouselSettings = {
+    dots: true,
+    inifite: true,
+    speed: 500,
+    slidesToShow: 2.5,
+    slidesToScroll: 1,
+    nextArrow: <Arrow direction="left"/>,
+    prevArrow: <Arrow direction="right"/>,
+    centerMode: true
+}

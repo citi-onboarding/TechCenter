@@ -12,6 +12,11 @@ export const AboutUsContainer = styled.header`
     justify-content: center;
     
     background: var(--FIRST-PRIMARY-COLOR);
+
+    @media(min-width: 426px) and (max-width: 989px){
+        height: 450px;
+
+    }
 `
 
 export const TopAboutUsContainer = styled.div`
@@ -62,9 +67,7 @@ export const TopAboutUsContainer = styled.div`
             }
 
         }
-    }
-
-    
+    }    
 `
 
 export const ValuesAboutUsContainer = styled.div`
@@ -86,6 +89,11 @@ export const ValuesAboutUsContainer = styled.div`
         justify-content: center;
 
         box-shadow: 0 4px 2px -2px gray;
+
+        img {
+            width: 10.1rem;
+            height: 10rem;
+        }
 
         p {
 
@@ -114,7 +122,5 @@ export const ValuesAboutUsContainer = styled.div`
             box-shadow: none;
             box-shadow: inset 0px 5px 2px -2px gray;
         }
-
     }
-
 `
