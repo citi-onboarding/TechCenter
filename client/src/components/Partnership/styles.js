@@ -14,4 +14,10 @@ export const PartnershipContainer = styled.div`
         margin: 1rem auto;
     }
 
+    @media(max-width:426px){
+        width: 10rem;
+        height: 3.5rem;
+        margin: 1rem auto;
+    }
+
 `

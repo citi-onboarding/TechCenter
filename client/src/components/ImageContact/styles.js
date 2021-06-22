@@ -9,4 +9,9 @@ export const ImageContactContainer = styled.div`
     background-size: cover;
     background-position: center;
 
+    @media(max-width: 426px){
+        width: 20rem;
+        height: 20rem;
+    }
+
 `

@@ -30,5 +30,12 @@
     opacity: 0.9;
 }
 
+@media (max-width: 426px){
+
+    .slick-dots {
+        bottom: -8rem;
+    }
+
+}
 
 

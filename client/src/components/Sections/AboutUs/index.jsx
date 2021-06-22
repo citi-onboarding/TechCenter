@@ -9,12 +9,17 @@ import legos from '../../../assets/legos.svg';
 import diversity from '../../../assets/diversity.svg';
 import teaching from '../../../assets/teaching.svg';
 import deployment from '../../../assets/deployment.svg';
+import diversityMobile from '../../../assets/mobile-diversity.svg';
+import deploymentMobile from '../../../assets/deployment-mobile.svg';
+import teachingMobile from '../../../assets/teaching-mobile.svg';
+
 import API from '../../../services/API';
 
 export default function AboutUs() {
 
     const [values, setValues] = useState([]);
     const images = [diversity, deployment, teaching];
+    const imagesMobile = [diversityMobile, deploymentMobile, teachingMobile];
 
     async function getValuesInformation(){
         await API.get('/aboutus').then((response)=> {
@@ -25,7 +30,7 @@ export default function AboutUs() {
     }
 
     useEffect(()=>{
-        getValuesInformation()
+        getValuesInformation();
     }, [])
 
     return (
@@ -49,7 +54,7 @@ export default function AboutUs() {
                     values.map((value, index) => {
                         return(
                             <div key={index} className={ index === 1 ? "mid-values" : ""} >
-                                <img src={images[index]} alt="Icons" />
+                                <img src={ window.innerWidth <= 425 ? imagesMobile[index] : images[index]} alt="Icons" />
 
                                 <p className="title">{value.Title}</p>
 

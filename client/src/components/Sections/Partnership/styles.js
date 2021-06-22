@@ -10,6 +10,14 @@ export const PartnershipContainer = styled.div`
     &.mid-partnerships {
         height: 12rem;
     }
+
+    @media (max-width: 426px){
+        height: 30rem;
+
+        &.mid-partnerships {
+            height: 20rem;
+        }
+    }
 `
 
 export const Partnerships = styled.div`
@@ -20,6 +28,11 @@ export const Partnerships = styled.div`
 
     display: grid;
     grid-template-columns: 80% 20%;
+
+    @media (max-width: 426px){
+        display: flex;
+        flex-direction: column-reverse;
+    }
 ` 
 
 export const PartnershipsInformation = styled.div`
@@ -36,6 +49,14 @@ export const PartnershipsInformation = styled.div`
     color: var(--BLACK);
     background: var(--BACKGROUND-PARTNERSHIPS-SECTION);
 
+    @media(max-width: 426px){
+        width: 50%;
+        align-self: flex-end;
+        font-size: 1.8rem;
+
+        padding-top: 1rem;
+    }
+
 `
 
 export const PartnershipsImages = styled.div`
@@ -51,6 +72,15 @@ export const PartnershipsImages = styled.div`
         flex-direction: row;
         height: 12rem;
         width: 90%;
+    }
+
+    @media(max-width: 426px){
+        width: 100%;
+        height: fit-content;
+        max-height: 40rem;
+
+        flex-direction: row;
+        margin-top: 1.8rem;
     }
 
 `

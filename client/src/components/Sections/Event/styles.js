@@ -58,14 +58,31 @@ export const EventTopContainer = styled.div`
                 font-weight: 400;
                 font-size: 1.4rem;
                 padding: 3.6rem 0rem 0rem 4.5rem;
-
-                
             }
         }
     }
 
     @media (min-width: 990px) and (max-width: 1099px){
         height: 40%;
+    }
+
+    @media (max-width: 426px){
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, 30%);
+
+        div {
+
+            &.hightlight-box {
+                width: 50%;
+            }
+
+            p {
+                &.description {
+                    width: 100%;
+                    padding: 2.5rem 0rem 0rem 0rem;
+                }
+            }
+        }
     }
 `
 
@@ -81,6 +98,10 @@ export const EventCarousel = styled.div`
 
     @media (min-width: 822px) and (max-width: 989px) {
         bottom: 12rem;
+    }
+
+    @media (max-width: 426px) {
+        width: 100%;
     }
 `
 

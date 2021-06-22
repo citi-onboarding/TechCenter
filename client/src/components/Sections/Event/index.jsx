@@ -13,13 +13,13 @@ import { ConvertDateTime } from './ConvertDateTime';
 import EventCarouselItem from '../../EventCarouselItem';
 import Slider from "react-slick";
 import {
-    mainCarouselSettings
+    CarouselSettings
 } from './CarouselSettings.js';
 
 export default function Event() {
 
     const [events, setEvents ]= useState([]);
-
+    
     async function getEvents(){
         await API.get('/events').then((response) => {
             let amountOfEvents = [];
@@ -60,7 +60,7 @@ export default function Event() {
             <EventCarouselContaier>
 
             <EventCarousel>
-                <Slider {...mainCarouselSettings}>
+                <Slider {...CarouselSettings}>
                     {
                         events.map((event,index) => {
                             return (
