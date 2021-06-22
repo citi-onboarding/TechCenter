@@ -56,7 +56,10 @@ export default function FeedBackCarousel() {
     };
 
     const hiddenClick = function (id) {
-        document.querySelectorAll("#feedback-slider button")[id].click()
+        const button = document.querySelectorAll("#feedback-slider button")
+        if (button) {
+            button[id].click()
+        }
     }
 
 
