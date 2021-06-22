@@ -10,6 +10,19 @@ export const EventContainer = styled.header`
     justify-content: center;
 
     background: var(--WHITE-BACKGROUND);
+
+    @media (min-width: 990px) and (max-width: 1099px){
+        height: 480px;
+    }
+
+    @media (min-width: 822px) and (max-width: 989px) {
+        height: 430px;
+    }
+
+    @media(min-width: 426px) and (max-width: 822px){
+        height: 310px;
+
+    }
 `
 
 export const EventTopContainer = styled.div`
@@ -50,6 +63,10 @@ export const EventTopContainer = styled.div`
             }
         }
     }
+
+    @media (min-width: 990px) and (max-width: 1099px){
+        height: 40%;
+    }
 `
 
 export const EventCarousel = styled.div`
@@ -57,6 +74,14 @@ export const EventCarousel = styled.div`
 
     position: relative;
     bottom: 8.5rem;
+
+    @media (min-width: 990px) and (max-width: 1099px){
+        bottom: 6.5rem;
+    }
+
+    @media (min-width: 822px) and (max-width: 989px) {
+        bottom: 12rem;
+    }
 `
 
 export const EventCarouselContaier = styled.div`

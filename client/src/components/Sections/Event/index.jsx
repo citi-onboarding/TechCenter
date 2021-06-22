@@ -36,7 +36,7 @@ export default function Event() {
 
     useEffect(() => {
         getEvents();
-    },[])
+    }, [])
 
     return (
 
