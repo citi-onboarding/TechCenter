@@ -51,8 +51,8 @@ export const FooterContent = styled.div`
             grid-column-end: 2;
             grid-row-start: 2;
             grid-row-end: 3;
-            width: 12rem;
-            height: 12rem;
+            width: 14rem;
+            height: 14rem;
             justify-self: start;
         }
 
