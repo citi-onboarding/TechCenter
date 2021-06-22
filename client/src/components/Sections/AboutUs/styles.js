@@ -207,6 +207,7 @@ export const ValuesAboutUsContainer = styled.div`
                     grid-row-end: 3;
                     text-align: left;
                     align-self: flex-start;
+                    width: 86%;
                 }
 
             }

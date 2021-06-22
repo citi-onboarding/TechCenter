@@ -21,8 +21,8 @@ export const EventCarouselItemContainer = styled.header`
     }
 
     @media(max-width: 426px){
-        width: 18rem;
-        height:  22rem;
+        width: 16rem;
+        height: 20rem;
     }
 
 `
@@ -35,7 +35,7 @@ export const EventCarouselItemContainerImage = styled.div`
     background-position: center;
 
     @media(max-width: 426px){
-        width: 18rem;
+        width: 16rem;
     }
 `
 

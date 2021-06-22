@@ -29,6 +29,14 @@ export const CarouselSettings = {
                 slidesToShow: 1.5,
                 centerMode: true
             }
+        },
+
+        {
+            breakpoint: 426,
+            settings: {
+                slidesToShow: 1.6,
+                centerMode: true, 
+            }
         }
     ]
 
