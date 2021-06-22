@@ -33,7 +33,7 @@ export const ArrowContainer = styled.div`
         }
     }
 
-    @media(min-width: 635px) and (max-width: 822px){
+    @media(min-width: 427px) and (max-width: 822px){
         &.right {
             top: -6rem;
         }
@@ -41,17 +41,6 @@ export const ArrowContainer = styled.div`
         &.left {
             top: -35rem;
         }
-    }
-
-    @media (min-width:427px) and (max-width: 634px){
-        &.right {
-            top: -12rem;
-        }
-
-        &.left {
-            top: -35rem;
-        }
-
     }
 
     @media (max-width: 426px){

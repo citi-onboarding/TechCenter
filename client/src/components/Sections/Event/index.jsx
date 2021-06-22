@@ -11,8 +11,7 @@ import {
 } from './styles';
 
 import {
-    mainCarouselSettings,
-    mobileCarouselSettings
+    CarouselSettings
 } from './CarouselSettings.js';
 
 import { ConvertDateTime } from './ConvertDateTime';
@@ -20,9 +19,7 @@ import { ConvertDateTime } from './ConvertDateTime';
 export default function Event() {
 
     const [events, setEvents ]= useState([]);
-    const [carousel, setCarousel] = useState({});
-
-
+    
     async function getEvents(){
         await API.get('/events').then((response) => {
             let amountOfEvents = [];
@@ -37,21 +34,9 @@ export default function Event() {
         })
     }
 
-    function handleResize() {
-        console.log(window.innerWidth);
-        if(window.innerWidth <= 425){
-            setCarousel(mobileCarouselSettings);
-        } else {
-            setCarousel(mainCarouselSettings);
-        }
-    }
-
     useEffect(() => {
         getEvents();
-        handleResize();
     }, [])
-
-    window.addEventListener('resize', handleResize)
 
     return (
 
@@ -75,7 +60,7 @@ export default function Event() {
             <EventCarouselContaier>
 
             <EventCarousel>
-                <Slider {...carousel }>
+                <Slider {...CarouselSettings}>
                     {
                         events.map((event,index) => {
                             return (

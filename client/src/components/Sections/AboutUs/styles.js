@@ -13,9 +13,12 @@ export const AboutUsContainer = styled.header`
     
     background: var(--FIRST-PRIMARY-COLOR);
 
-    @media(min-width: 426px) and (max-width: 989px){
+    @media(min-width: 427px) and (max-width: 989px){
         height: 450px;
+    }
 
+    @media (max-width: 426px){
+        height: 750px;
     }
 `
 
@@ -81,7 +84,8 @@ export const TopAboutUsContainer = styled.div`
         flex-direction: column-reverse;
         align-items: flex-end;
 
-        margin-bottom: 8rem;
+        margin-bottom: 0rem;
+        padding-top: 6rem;
 
         div {
             &.mid-top-about-us{
@@ -123,7 +127,7 @@ export const ValuesAboutUsContainer = styled.div`
             width: 36rem;
 
             &.title {
-                width: max-content ;
+                width: 35rem ;
                 margin-top: 2rem;
                 font-size: 2rem;
                 font-weight: 700;
@@ -160,19 +164,20 @@ export const ValuesAboutUsContainer = styled.div`
 
             box-shadow: none;
 
+            &.mid-values{
+                box-shadow: none;
+            }
+
             img {
-                width: 7rem;
+                width: 9rem;
                 grid-column-start: 1;
                 grid-column-end: 2;
                 grid-row-start: 1;
                 grid-row-end: 3;
                 justify-self: center;
+                margin-bottom: 4rem;
 
                 
-            }
-
-            img path {
-                fill: #F4F4F4;
             }
 
             p {
@@ -182,6 +187,7 @@ export const ValuesAboutUsContainer = styled.div`
                 }
 
                 &.title {
+                    width: max-content;
                     grid-column-start: 2;
                     grid-column-end: 3;
                     grid-row-start: 1;
