@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
     & > div{
         height: auto;
-        overflow: hidden;
         &:first-of-type(button){ display: none; }
     }
 
