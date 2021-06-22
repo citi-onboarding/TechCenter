@@ -42,6 +42,38 @@ export const FooterContent = styled.div`
         }
     }
 
+    @media(max-width: 426px){
+
+        grid-template-rows: 30% 40% 30%;
+
+        img {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            width: 12rem;
+            height: 12rem;
+            justify-self: start;
+        }
+
+        div {
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                width: auto;
+                font-size: 1.2rem;
+                margin: 0;
+            }
+
+        }
+    }
+
 `
 export const FooterSocialMedia = styled.header`
     height: 16rem;
@@ -57,6 +89,9 @@ export const FooterSocialMedia = styled.header`
     div {
 
         &.text {
+            display: flex;
+            flex: row;
+            align-items: center;
             p {
                 width: 100%;
                 margin: 0 auto;
@@ -79,6 +114,35 @@ export const FooterSocialMedia = styled.header`
             cursor: pointer;
             width: 3rem;
             height: 3rem;
+        }
+    }
+
+    @media(max-width: 426px){
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+        height: 12rem;
+        width: 14rem;
+        justify-self: end;
+        align-self: flex-end;
+
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+
+        div {
+
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            &.text {
+                p {
+                    font-size: 1.0rem;
+                }
+            }
         }
     }
 `
