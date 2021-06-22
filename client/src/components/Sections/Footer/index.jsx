@@ -47,7 +47,6 @@ export default function Footer() {
     }, [])
 
     return (
-
         <FooterContainer>
 
             <FooterContent>
@@ -74,7 +73,7 @@ export default function Footer() {
                     </div>
 
                     <div className="text">
-                        <p>Made with &lt;/&gt; and &lt;3</p>
+                        <p>Made with &lt;/&gt; and &hearts;</p>
                     </div>
                 </FooterSocialMedia>
             </FooterContent>

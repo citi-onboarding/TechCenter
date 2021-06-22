@@ -176,23 +176,25 @@ export const ValuesAboutUsContainer = styled.div`
                 grid-row-end: 3;
                 justify-self: center;
                 margin-bottom: 4rem;
-
-                
             }
 
             p {
+
+                
                 &.title, &.description {
                     margin-top: 0;
-                    word-break: break-all;
+                    word-wrap: break-word;
                 }
 
                 &.title {
-                    width: max-content;
+                    width: min-content;
                     grid-column-start: 2;
                     grid-column-end: 3;
                     grid-row-start: 1;
                     grid-row-end: 2;
                     border-bottom: 2px solid #F4F4F4;
+
+                    width: 86%;
 
                     align-self: center;
                     text-align: left;
@@ -205,7 +207,6 @@ export const ValuesAboutUsContainer = styled.div`
                     grid-row-end: 3;
                     text-align: left;
                     align-self: flex-start;
-
                 }
 
             }
