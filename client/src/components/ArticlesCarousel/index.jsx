@@ -1,6 +1,4 @@
-import "./styles.css"
-
-import { ButtonWrapper, Container, UpperWrapper } from "./styles.js";
+import { ButtonWrapper, Container, MainContainer, UpperWrapper } from "./styles.js";
 import React, { useEffect, useState } from 'react'
 
 import ArticleCard from "../ArticleCard";
@@ -9,13 +7,12 @@ import Slider from "react-slick";
 
 export default function ArticlesCarousel() {
     const [articles, setArticles] = useState([]);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
             MEDIUM.get("/@KonradDaWo").then(res => {
-                console.log(res)
                 setArticles(res.data.items)
-                console.log(articles)
             }
             ).catch(e => console.log(e))
         }
@@ -34,7 +31,7 @@ export default function ArticlesCarousel() {
             {
                 breakpoint: 1360,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true
@@ -62,12 +59,7 @@ export default function ArticlesCarousel() {
         ]
     };
 
-    const hiddenClick = function (id) {
-        const hiddenButton = document.querySelectorAll("#article-slider button")[id]
-        if (hiddenButton) {
-            hiddenButton.click()
-        }
-    }
+
 
     function toText(node) {
         let tag = document.createElement('div')
@@ -76,32 +68,39 @@ export default function ArticlesCarousel() {
         return node
     }
     function shortenText(text, startingPoint, maxLength) {
-        console.log(text)
         return text.length > maxLength ?
             text.slice(startingPoint, maxLength) :
             text
     }
 
+
+    useEffect(() => {
+        if (window.innerWidth < 1200) {
+            setIsMobile(true)
+        } else {
+            setIsMobile(false)
+        }
+        console.log(isMobile)
+    })
+
     return (
-        <div>
+        <MainContainer>
             <UpperWrapper>
                 <ButtonWrapper>
                     <hr size="7" width="20%" color="black" />
                     <p> Últimos artigos </p>
-                    <span>
-                        <button onClick={e => hiddenClick(0)}>&lt;</button>
-                        <button onClick={e => hiddenClick(1)}>&gt;</button>
-                    </span>
+                    <button className="blueBtn">Saiba mais</button>
                 </ButtonWrapper>
                 <p className="right-text">
                     Somos uma comunidade e trocamos conhecimento de forma fluída e
                     constante. Estamos sempre em busca do intercâmbio das informações!
                 </p>
             </UpperWrapper>
-            <Container id="article-slider">
+            <Container id="article-slider" isMobile={isMobile}>
                 <Slider {...settings}>
                     {articles.map(e => (
                         <ArticleCard
+                            key={e.guid}
                             guid={e.guid}
                             title={shortenText(e.title, 0, 30)}
                             content={shortenText(toText(e.content), 60, 120)}
@@ -110,6 +109,6 @@ export default function ArticlesCarousel() {
                     ))}
                 </Slider>
             </Container>
-        </div>
+        </MainContainer>
     )
 }
