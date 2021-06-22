@@ -30,7 +30,7 @@ export default function AboutUs() {
     }
 
     useEffect(()=>{
-        getValuesInformation()
+        getValuesInformation();
     }, [])
 
     return (

@@ -50,7 +50,6 @@ export default function Footer() {
         <FooterContainer>
 
             <FooterContent>
-
                 <img src={footerLogoTechCenter} alt="Footer Logo" />
 
                 <div>
