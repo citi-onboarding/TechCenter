@@ -55,5 +55,17 @@ export const Container = styled.nav`
             margin-left: 5rem
         }
 
+
+    @media(max-width:1100px){
+        display:none;
+    }
+`
+
+export const MobileWrapper = styled.div`
+
+    width: 100vw;
+    background-color: var(--FIRST-PRIMARY-COLOR);
+    position: absolute;
+    top: 0;
 `
 

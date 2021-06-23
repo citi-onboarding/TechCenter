@@ -30,6 +30,11 @@ export const ButtonWrapper = styled.div`
     font-size: 24px;
     line-height: 29px;
 
+    hr{
+        width: 25rem;
+    }
+
+
     button{
         width: 32px;
         height: 32px;

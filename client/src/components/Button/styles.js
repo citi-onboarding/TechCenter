@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const ButtonContainer = styled.div`
 
     button {
@@ -17,7 +16,7 @@ export const ButtonContainer = styled.div`
             height: 5rem;
             
             background: var(--SECOND-PRIMARY-COLOR);
-            color: var(--FIRST-PRIMARY-COLOR)
+            color: var(--FIRST-PRIMARY-COLOR);
         }
     }
 

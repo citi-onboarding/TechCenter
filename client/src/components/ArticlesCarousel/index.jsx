@@ -7,11 +7,11 @@ import Slider from "react-slick";
 
 export default function ArticlesCarousel() {
     const [articles, setArticles] = useState([]);
-    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
-            MEDIUM.get("/@KonradDaWo").then(res => {
+            // TECHCENTER MEDIUM -> @techcentercomunidade 
+            MEDIUM.get("/@rkavner").then(res => {
                 setArticles(res.data.items)
             }
             ).catch(e => console.log(e))
@@ -29,9 +29,9 @@ export default function ArticlesCarousel() {
         initialSlide: 0,
         responsive: [
             {
-                breakpoint: 1360,
+                breakpoint: 1280,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true
@@ -72,17 +72,6 @@ export default function ArticlesCarousel() {
             text.slice(startingPoint, maxLength) :
             text
     }
-
-
-    useEffect(() => {
-        if (window.innerWidth < 1200) {
-            setIsMobile(true)
-        } else {
-            setIsMobile(false)
-        }
-        console.log(isMobile)
-    })
-
     return (
         <MainContainer>
             <UpperWrapper>
@@ -91,19 +80,19 @@ export default function ArticlesCarousel() {
                     <p> Últimos artigos </p>
                     <button className="blueBtn">Saiba mais</button>
                 </ButtonWrapper>
-                <p className="right-text">
+                <p className="right-text" >
                     Somos uma comunidade e trocamos conhecimento de forma fluída e
                     constante. Estamos sempre em busca do intercâmbio das informações!
                 </p>
             </UpperWrapper>
-            <Container id="article-slider" isMobile={isMobile}>
+            <Container id="article-slider" >
                 <Slider {...settings}>
                     {articles.map(e => (
                         <ArticleCard
                             key={e.guid}
                             guid={e.guid}
                             title={shortenText(e.title, 0, 30)}
-                            content={shortenText(toText(e.content), 60, 120)}
+                            content={shortenText(toText(e.content), 50, 110)}
                             thumbnail={e.thumbnail}
                         />
                     ))}

@@ -11,11 +11,8 @@ export default function Navbar() {
 
 
     function myFunction() {
-        if (window.pageYOffset <= 560) {
-            setIsOnTop(false)
-        } else {
-            setIsOnTop(true)
-        }
+        if (window.pageYOffset <= 560) { setIsOnTop(false) }
+        else { setIsOnTop(true) }
     }
 
 

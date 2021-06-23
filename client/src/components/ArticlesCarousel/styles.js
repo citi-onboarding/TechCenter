@@ -11,7 +11,10 @@ export const MainContainer = styled.div`
     );
 `
 
-export const Container = styled.div`    
+export const Container = styled.div`  
+
+    width: 90vw;
+    margin: auto;
     & > div{
         height: auto;
         &:first-of-type(button){ display: none; }
@@ -19,10 +22,19 @@ export const Container = styled.div`
 
     div{ margin:auto; }
 
-    ul{
-        height: ${({ isMobile }) => isMobile ? "5rem" : "none"} !important;
-        display: ${({ isMobile }) => isMobile ? "block" : "none"} !important;
+    ul{ 
+        display: none !important;
+        height: none !important;
     }
+
+    @media (max-width: 1100px) {
+        ul{ 
+            display: block !important; 
+            height: 5rem !important;
+        }    
+    }
+
+
 `
 
 export const UpperWrapper = styled.span`
@@ -34,6 +46,10 @@ export const UpperWrapper = styled.span`
         color: black;
         width: 40ch;
         margin: auto 0rem;
+        display: block;
+    }
+    @media (max-width: 1100px) {
+        .right-text{ display: none; }
     }
 `
 

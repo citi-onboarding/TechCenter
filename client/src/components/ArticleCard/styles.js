@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ArticleWrapper = styled.div`
-    width: 315px !important;
+    width: 280px !important;
     height: 309px;
     background-color: white;
     color: black;
@@ -19,7 +19,7 @@ export const ArticleWrapper = styled.div`
     }
 
     .thumbnail{
-        width: 315px;
+        width: 280px;
         height: 158px;
         object-fit: cover;
     }
