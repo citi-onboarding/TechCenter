@@ -1,5 +1,5 @@
 const dotenv = require('dotenv')
-dotenv.config()
+dotenv.config();
 
 const production = process.env.NODE_ENV === "production";
 
