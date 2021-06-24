@@ -42,7 +42,7 @@ export const PartnershipsInformation = styled.div`
     justify-content: center;
     align-items: flex-end;
 
-    border-top: 7px solid var(--BLACK);
+    border-top: 0.7rem solid var(--BLACK);
     font-weight: 700;
     font-size: 2rem;
     text-align: right;

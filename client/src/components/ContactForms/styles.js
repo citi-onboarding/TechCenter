@@ -5,13 +5,23 @@ export const ContactFormsContainer = styled.header`
     height: 40rem;
 
     background: var(--FIRST-PRIMARY-COLOR);
+
+    @media(max-width: 426px){
+        height: 50rem;
+
+        background: linear-gradient(
+            to bottom, 
+            var(--FIRST-PRIMARY-COLOR) 60%, 
+            var(--WHITE-BACKGROUND) 60% 100%
+        );
+    }
 `
 
-export const ContactInformation = styled.div`
+export const ContactInformation = styled.header`
     width: 20%;
     height: 26rem;
 
-    border-top: 7px solid var(--BORDER-CONTACT-SECTION);
+    border-top: 0.7rem solid var(--BORDER-CONTACT-SECTION);
 
     display: flex;
     flex-direction: column;
@@ -36,9 +46,15 @@ export const ContactInformation = styled.div`
         }
     }
 
-    div {
-        display: flex;
-        justify-content: flex-end;
+    @media(max-width: 426px){
+        width: 50%;
+        align-self: flex-end;
+
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 `
 
@@ -47,7 +63,6 @@ export const ContactFormsContent = styled.div`
     width: 85%;
     height: 100%;
     margin: 0 auto;
-    background: var(--FIRST-PRIMARY-COLOR);
 
     display: flex;
     flex-direction: row;
@@ -59,7 +74,7 @@ export const ContactFormsContent = styled.div`
         width: 60rem;
         height: 26rem;
         border-radius: 10px;
-        background: white;
+        background: var(--FORMS);
 
         display: flex;
         flex-direction: column;
@@ -87,6 +102,7 @@ export const ContactFormsContent = styled.div`
             border: none;
             margin: 2.2rem 0 0 6rem;
             width: 83%;
+            background: var(--FORMS);
 
             border-bottom: 1px solid var(--LINE-INPUT);
 
@@ -139,6 +155,31 @@ export const ContactFormsContent = styled.div`
 
             button {
                 font-size: 1.5rem;
+            }
+        }
+    }
+
+    @media(max-width: 426px){
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            margin: 1rem auto;
+        }
+
+        form {
+            width: 36rem;
+            height: 24rem;
+
+
+            input {
+                margin: 2.2rem 0 0 4.5rem;
+                width: 80%;
+            }
+
+            button {
+                padding: 1rem 2rem;
             }
         }
     }
