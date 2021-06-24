@@ -71,4 +71,10 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 30%;
         }
     }
+
+    @media(min-width: 2560px){
+        html {
+            font-size: 68%;
+        }
+    }
 `

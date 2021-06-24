@@ -9,6 +9,7 @@ import {
 import {
     DoubleRightOutlined
 } from '@ant-design/icons'
+import { fontsize } from '../../config/config.js';
 
 export default function EventCarouselItem({event}) {
     return (
@@ -24,7 +25,8 @@ export default function EventCarouselItem({event}) {
             <EventCarouselItemButton>
                 <div>
                     <DoubleRightOutlined className="button" style={{
-                        color: "var(--BLACK)"
+                        color: "var(--BLACK)",
+                        fontSize: "1.4rem"
                     }}/>
                 </div>
             </EventCarouselItemButton>
