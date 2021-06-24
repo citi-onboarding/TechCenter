@@ -2,8 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     background-color: var(--SECOND-PRIMARY-COLOR);
-    width: 32.75rem;
-    height: 20.3rem;
+    width: 325px;
+    height: 290px;
+
+    @media(max-width:1100px){
+        width: 290px;
+        height: 160px;
+    }
     border-radius: 30px;
 
     display: flex;
@@ -25,6 +30,11 @@ export const Container = styled.div`
         margin: 1rem auto;
 
         width: clamp(45ch, 50%, 75ch);
+
+        @media(max-width:1100px){
+            width: clamp(35ch, 50%, 50ch);
+        }
+
     }
 
     h3{
