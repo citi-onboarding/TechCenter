@@ -19,9 +19,11 @@ export const Container = styled.div`
 
     div{ margin:auto; }
 
-    ul{
-        height: ${({ isMobile }) => isMobile ? "5rem" : "none"} !important;
-        display: ${({ isMobile }) => isMobile ? "block" : "none"} !important;
+    @media(max-width:1200px){
+        ul{
+            height: none;
+            display: none;
+        }
     }
 `
 
@@ -34,6 +36,12 @@ export const UpperWrapper = styled.span`
         color: black;
         width: 40ch;
         margin: auto 0rem;
+    }
+
+    @media(max-width: 1200px){
+        .right-text{
+            display: none;
+        }
     }
 `
 
@@ -64,6 +72,16 @@ export const ButtonWrapper = styled.div`
         color: var(--FIRST-PRIMARY-COLOR);
         outline: none;
         border: none;
+    }
+
+    @media(max-width: 1200px){
+        .blueBtn{
+            display: none;
+        }
+        hr{
+            width: 20rem;
+            margin-bottom: -10rem;
+        }
     }
 
     .blueBtn{
