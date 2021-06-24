@@ -16,12 +16,12 @@ function App() {
       <GlobalStyle />
       <InitialSection />
       <Event />
-      <AboutUs id="ABOUTUS" />
+      <AboutUs />
       <FeedBackSection />
       <Partnerships />
       <ArticleSection />
-      <Contact/>
-      <Footer/>
+      <Contact />
+      <Footer />
     </>
   );
 }

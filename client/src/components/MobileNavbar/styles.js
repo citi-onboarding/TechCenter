@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.nav`
-    a{
+    .navText{
         text-decoration: none;
         color: black;
         font-style: normal;

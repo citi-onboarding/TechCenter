@@ -11,12 +11,12 @@ const settings = {
     dots: true,
     infinite: true,
     speed: 100,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1440,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -66,7 +66,7 @@ export default function FeedBackCarousel() {
         <div>
             <ButtonWrapper>
                 <hr size="7" width="20%" color="black" />
-                <p> O que falaram sobre <br /> TechCenter </p>
+                <p> O que falaram sobre <br /> Tech Center </p>
                 <span>
                     <button onClick={e => hiddenClick(0)}>&lt;</button>
                     <button onClick={e => hiddenClick(1)}>&gt;</button>
