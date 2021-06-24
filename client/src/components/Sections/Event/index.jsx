@@ -9,12 +9,12 @@ import {
 import react, { useEffect, useState } from 'react';
 
 import API from '../../../services/API';
-import {
-    CarouselSettings
-} from './CarouselSettings.js';
 import { ConvertDateTime } from './ConvertDateTime';
 import EventCarouselItem from '../../EventCarouselItem';
 import Slider from "react-slick";
+import {
+    CarouselSettings
+} from './CarouselSettings.js';
 
 export default function Event() {
 
@@ -40,7 +40,7 @@ export default function Event() {
 
     return (
 
-        <EventContainer id="EVENTOS">
+        <EventContainer>
 
             <EventTopContainer>
 

@@ -1,15 +1,16 @@
+import React from 'react';
 import {
     ContactConteiner
 } from './styles';
-import ContactForms from '../../ContactForms';
+
 import ContactImage from '../../ContactImage';
-import React from 'react';
+import ContactForms from '../../ContactForms';
 
 export default function Contact(){
 
 
     return (
-        <ContactConteiner id="CONTACT">
+        <ContactConteiner>
             <ContactForms/>
             <ContactImage/>
         </ContactConteiner>

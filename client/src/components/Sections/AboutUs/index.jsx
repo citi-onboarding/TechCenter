@@ -1,18 +1,19 @@
+import React, { useEffect, useState } from 'react';
 import {
     AboutUsContainer,
     TopAboutUsContainer,
     ValuesAboutUsContainer
 } from './styles';
-import React, { useEffect, useState } from 'react';
+
+import legos from '../../../assets/legos.svg';
+import diversity from '../../../assets/diversity.svg';
+import teaching from '../../../assets/teaching.svg';
+import deployment from '../../../assets/deployment.svg';
+import diversityMobile from '../../../assets/mobile-diversity.svg';
+import deploymentMobile from '../../../assets/deployment-mobile.svg';
+import teachingMobile from '../../../assets/teaching-mobile.svg';
 
 import API from '../../../services/API';
-import deployment from '../../../assets/deployment.svg';
-import deploymentMobile from '../../../assets/deployment-mobile.svg';
-import diversity from '../../../assets/diversity.svg';
-import diversityMobile from '../../../assets/mobile-diversity.svg';
-import legos from '../../../assets/legos.svg';
-import teaching from '../../../assets/teaching.svg';
-import teachingMobile from '../../../assets/teaching-mobile.svg';
 
 export default function AboutUs() {
 
@@ -20,20 +21,20 @@ export default function AboutUs() {
     const images = [diversity, deployment, teaching];
     const imagesMobile = [diversityMobile, deploymentMobile, teachingMobile];
 
-    async function getValuesInformation() {
-        await API.get('/aboutus').then((response) => {
+    async function getValuesInformation(){
+        await API.get('/aboutus').then((response)=> {
             setValues(response.data)
-        }).catch((error) => {
+        }).catch((error)=> {
             console.log(error);
         })
     }
 
-    useEffect(() => {
+    useEffect(()=>{
         getValuesInformation();
     }, [])
 
     return (
-        <AboutUsContainer id="ABOUTUS">
+        <AboutUsContainer>
             <TopAboutUsContainer>
                 <img src={legos} alt="Legos Logo" />
 
@@ -51,9 +52,9 @@ export default function AboutUs() {
             <ValuesAboutUsContainer>
                 {
                     values.map((value, index) => {
-                        return (
-                            <div key={index} className={index === 1 ? "mid-values" : ""} >
-                                <img src={window.innerWidth <= 425 ? imagesMobile[index] : images[index]} alt="Icons" />
+                        return(
+                            <div key={index} className={ index === 1 ? "mid-values" : ""} >
+                                <img src={ window.innerWidth <= 425 ? imagesMobile[index] : images[index]} alt="Icons" />
 
                                 <p className="title">{value.Title}</p>
 

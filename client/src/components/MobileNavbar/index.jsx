@@ -40,25 +40,17 @@ export default function MobileNavbar() {
                     onClose={handleClose}
                     className="hamModal"
                 >
-                    <a onClick={() => handleClose()} href="#ABOUTUS">
-                        <MenuItem color="black" >Sobre</MenuItem>
-                    </a>
-                    <a onClick={() => handleClose()} href="#EVENTOS">
-                        <MenuItem>Eventos</MenuItem>
-                    </a>
-                    <a onClick={() => handleClose()} href="#PARCEIROS">
-                        <MenuItem>Parceiros</MenuItem>
-                    </a>
-                    <a onClick={() => handleClose()} href="#CONTENT">
-                        <MenuItem>Conteúdos</MenuItem>
-                    </a>
-                    <a onClick={() => handleClose()} href="#CONTACT">
-                        <MenuItem>Contatos</MenuItem>
-                    </a>
+
+
+                    <MenuItem><a href="#ABOUTUS">Sobre</a></MenuItem>
+                    <MenuItem><a href="!#">Eventos</a></MenuItem>
+                    <MenuItem><a href="!#">Parceiros</a></MenuItem>
+                    <MenuItem><a href="!#">Conteúdos</a></MenuItem>
+                    <MenuItem><a href="!#">Contatos</a></MenuItem>
 
                 </Menu>
             </div>
-        </Container >
+        </Container>
     )
 }
 

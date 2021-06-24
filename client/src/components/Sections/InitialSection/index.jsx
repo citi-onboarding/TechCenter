@@ -32,7 +32,7 @@ export default function InitialSection() {
     return (
         <React.Fragment>
             <MobileNavbar />
-            <InitialSectionContainer id="FIRST">
+            <InitialSectionContainer>
                 <InitialSectionTextContainer>
                     <p className="title">
                         Onde tudo se conceta e você evolui

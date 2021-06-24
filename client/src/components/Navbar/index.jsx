@@ -9,12 +9,9 @@ export default function Navbar() {
 
     window.onscroll = function () { myFunction() };
 
-    function myFunction() {
 
-        const height = window.innerHeight
-        console.log(height)
-        if (window.pageYOffset < height) {
-            console.log(height)
+    function myFunction() {
+        if (window.pageYOffset <= 560) {
             setIsOnTop(false)
         } else {
             setIsOnTop(true)
@@ -26,14 +23,14 @@ export default function Navbar() {
         <Container top={isOnTop} id="myHeader">
             <ul>
                 <li>
-                    <a href="#FIRST"><img src={logo} alt="small-logo-navbar" /></a>
+                    <img src={logo} alt="small-logo-navbar" />
                 </li>
                 <span>
                     <li><a href="#ABOUTUS">Sobre</a></li>
-                    <li><a href="#EVENTOS">Eventos</a></li>
-                    <li><a href="#PARCEIROS">Parceiros</a></li>
-                    <li><a href="#CONTENT">Conteúdos</a></li>
-                    <li><a href="#CONTACT">Contatos</a></li>
+                    <li><a href="!#">Eventos</a></li>
+                    <li><a href="!#">Parceiros</a></li>
+                    <li><a href="!#">Conteúdos</a></li>
+                    <li><a href="!#">Contatos</a></li>
                 </span>
             </ul>
         </Container>

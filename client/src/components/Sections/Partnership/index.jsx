@@ -1,10 +1,10 @@
+import React, { useEffect, useState } from 'react'
 import {
     PartnershipContainer,
     Partnerships,
-    PartnershipsImages,
-    PartnershipsInformation
+    PartnershipsInformation,
+    PartnershipsImages
 } from './styles.js';
-import React, { useEffect, useState } from 'react'
 
 import API from '../../../services/API.js';
 import Partnership from '../../Partnership/Partnership';
@@ -34,7 +34,7 @@ export default function PartnershipsSection(){
     },[])
 
     return(
-        <PartnershipContainer id="PARCEIROS" className={ partnerships.length <= 6 ? "mid-partnerships" : "" }>
+        <PartnershipContainer className={ partnerships.length <= 6 ? "mid-partnerships" : "" }>
             <Partnerships>
                 <PartnershipsImages className={ partnerships.length <= 6 ? "mid-partnerships" : "" }>
 
