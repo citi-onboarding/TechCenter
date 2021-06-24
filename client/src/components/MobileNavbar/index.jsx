@@ -42,7 +42,7 @@ export default function MobileNavbar() {
                 >
 
 
-                    <MenuItem><a href="!#">Sobre</a></MenuItem>
+                    <MenuItem><a href="#ABOUTUS">Sobre</a></MenuItem>
                     <MenuItem><a href="!#">Eventos</a></MenuItem>
                     <MenuItem><a href="!#">Parceiros</a></MenuItem>
                     <MenuItem><a href="!#">Conteúdos</a></MenuItem>

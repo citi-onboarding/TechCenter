@@ -26,7 +26,7 @@ export default function Navbar() {
                     <img src={logo} alt="small-logo-navbar" />
                 </li>
                 <span>
-                    <li><a href="!#">Sobre</a></li>
+                    <li><a href="#ABOUTUS">Sobre</a></li>
                     <li><a href="!#">Eventos</a></li>
                     <li><a href="!#">Parceiros</a></li>
                     <li><a href="!#">Conteúdos</a></li>
