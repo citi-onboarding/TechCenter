@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d46a860.chunk.css",
-    "main.js": "/static/js/main.1c6ef881.chunk.js",
-    "main.js.map": "/static/js/main.1c6ef881.chunk.js.map",
+    "main.css": "/static/css/main.6ce6de41.chunk.css",
+    "main.js": "/static/js/main.19de2de6.chunk.js",
+    "main.js.map": "/static/js/main.19de2de6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.120840cb.js",
     "runtime-main.js.map": "/static/js/runtime-main.120840cb.js.map",
     "static/js/2.26b41dfb.chunk.js": "/static/js/2.26b41dfb.chunk.js",
     "static/js/2.26b41dfb.chunk.js.map": "/static/js/2.26b41dfb.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.4d46a860.chunk.css.map": "/static/css/main.4d46a860.chunk.css.map",
+    "static/css/main.6ce6de41.chunk.css.map": "/static/css/main.6ce6de41.chunk.css.map",
     "static/js/2.26b41dfb.chunk.js.LICENSE.txt": "/static/js/2.26b41dfb.chunk.js.LICENSE.txt",
     "static/media/articleArrow.b1edd85d.svg": "/static/media/articleArrow.b1edd85d.svg",
+    "static/media/citi.68359ab5.svg": "/static/media/citi.68359ab5.svg",
+    "static/media/deployment-mobile.170c8388.svg": "/static/media/deployment-mobile.170c8388.svg",
     "static/media/deployment.73fde982.svg": "/static/media/deployment.73fde982.svg",
     "static/media/diversity.421cf604.svg": "/static/media/diversity.421cf604.svg",
     "static/media/feedback-icon.10b5eeb0.svg": "/static/media/feedback-icon.10b5eeb0.svg",
@@ -20,13 +22,15 @@
     "static/media/legosContact.81307627.svg": "/static/media/legosContact.81307627.svg",
     "static/media/logoTechCenter.09e4dec1.svg": "/static/media/logoTechCenter.09e4dec1.svg",
     "static/media/medium.e7306820.svg": "/static/media/medium.e7306820.svg",
+    "static/media/mobile-diversity.158ca42d.svg": "/static/media/mobile-diversity.158ca42d.svg",
+    "static/media/teaching-mobile.def39fad.svg": "/static/media/teaching-mobile.def39fad.svg",
     "static/media/teaching.c20bb229.svg": "/static/media/teaching.c20bb229.svg",
     "static/media/youtube.1fc20aca.svg": "/static/media/youtube.1fc20aca.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.120840cb.js",
     "static/js/2.26b41dfb.chunk.js",
-    "static/css/main.4d46a860.chunk.css",
-    "static/js/main.1c6ef881.chunk.js"
+    "static/css/main.6ce6de41.chunk.css",
+    "static/js/main.19de2de6.chunk.js"
   ]
 }
