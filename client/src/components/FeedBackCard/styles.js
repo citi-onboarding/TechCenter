@@ -18,13 +18,13 @@ export const Container = styled.div`
     p{
         font-style: normal;
         font-weight: normal;
-        font-size: 1.12rem;
         line-height: 1.3rem;
         color: black;
 
         margin: 1rem auto;
 
-        width: clamp(45ch, 50%, 75ch);
+        /* width: clamp(45ch, 50%, 75ch); */
+        width: 90%;
     }
 
     h3{
@@ -33,6 +33,7 @@ export const Container = styled.div`
         font-size: 1.12rem;
         line-height: 1.3rem;
         color: black;
+        width: 90%;
 
         margin: 1rem auto;
     }

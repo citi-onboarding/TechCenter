@@ -28,7 +28,7 @@ export const ArticleWrapper = styled.div`
         margin-left: auto;
         position: relative;
         bottom: 0;
-        margin-left: auto;
+        margin-right: 1.1rem;
     }
 
 `

@@ -30,16 +30,23 @@ export default function ContactForms() {
 
     async function sendEmail(event){
         event.preventDefault();
-
         await API.post('contact', {
             name, email, phone, message
         }).then((response) => {
             const { answer } = response.data; 
             setFeedback(answer);
+            clearInputs();
         }).catch((error) => {
             const { answer } = error.data;
             setFeedback(answer);
         })
+    }
+
+    function clearInputs(){
+        setName('')
+        setEmail('')
+        setMessage('')
+        setPhone('')
     }
 
     useEffect(() => {
@@ -55,6 +62,7 @@ export default function ContactForms() {
                         name="name"
                         placeholder="Comece pelo seu nome"
                         className = "first-input"
+                        value = {name}
                         onChange= { (event) => {
                             setName(event.target.value);
                         }}
@@ -64,6 +72,7 @@ export default function ContactForms() {
                         type="email"
                         name="email"
                         placeholder="Agora, o seu e-mail"
+                        value = {email}
                         onChange = { (event) => {
                             setEmail(event.target.value);
                         }}
@@ -73,6 +82,7 @@ export default function ContactForms() {
                         type="text"
                         name="phone"
                         placeholder="Digite seu número de telefone"
+                        value = {phone}
                         onChange={ (event) => {
                             setPhone(event.target.value);
                         }}
@@ -82,6 +92,7 @@ export default function ContactForms() {
                         type="text"
                         name="message"
                         placeholder="Sua mensagem"
+                        value = {message}
                         onChange = { (event) => {
                             setMessage(event.target.value);
                         }}

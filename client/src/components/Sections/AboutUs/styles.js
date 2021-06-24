@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const AboutUsContainer = styled.header`
     width: 100%;
-    height: 650px;
+    height: 100%;
+    min-height: 410px;
     margin: 0 auto;
     margin-bottom: 10px;
+    padding-top: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -106,6 +108,7 @@ export const ValuesAboutUsContainer = styled.div`
     border: none;
 
     div {
+        height: 30rem;
         border-right: 1px solid black;
 
         display: flex;
@@ -153,14 +156,15 @@ export const ValuesAboutUsContainer = styled.div`
 
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
-        height: 100rem;
+        height: 45rem;
 
         div {
 
             display: grid;
             grid-template-columns: 40% 60%;
-            grid-template-rows: 8rem 8rem;
+            grid-template-rows: 7.5rem 7.5rem;
 
             box-shadow: none;
 
@@ -170,6 +174,7 @@ export const ValuesAboutUsContainer = styled.div`
 
             img {
                 width: 9rem;
+                height: 9rem;
                 grid-column-start: 1;
                 grid-column-end: 2;
                 grid-row-start: 1;

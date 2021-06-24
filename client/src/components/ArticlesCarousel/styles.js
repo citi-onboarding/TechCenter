@@ -68,6 +68,10 @@ export const ButtonWrapper = styled.div`
 
     button:hover{
         cursor: pointer;
+        background: var(--SECOND-PRIMARY-COLOR);
+        color: var(--FIRST-PRIMARY-COLOR);
+        outline: none;
+        border: none;
     }
 
     @media(max-width: 1200px){

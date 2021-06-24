@@ -22,7 +22,13 @@ export const ButtonWrapper = styled.div`
     
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+
+    p {
+        &.header-title {
+            margin-top: 2rem;
+        }
+    }
+
     
     color:black;
     font-style: normal;
