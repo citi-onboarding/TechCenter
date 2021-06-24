@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.nav`
+    @media(max-width: 1200px){
+        &{
+            display: none;
+        }
+    }
+
     background-color: var(--FIRST-PRIMARY-COLOR);
     height: 8vh;
     width: 100%; 

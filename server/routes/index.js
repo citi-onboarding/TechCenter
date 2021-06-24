@@ -10,6 +10,7 @@ const aboutUs = require('../controllers/AboutUsController');
 const contactImage = require('../controllers/ContactImageController');
 const contact = require('../controllers/ContactController');
 const mail = require('../controllers/MailController');
+const articleText = require("../controllers/ArticleText")
 
 
 module.exports = (app) => {
@@ -39,8 +40,8 @@ module.exports = (app) => {
     firstTextController.getFirstText(request, response)
   });
 
-  app.get('/api/aboutus', (request, response) =>  {
-    aboutUs.getAbouts(request,response)
+  app.get('/api/aboutus', (request, response) => {
+    aboutUs.getAbouts(request, response)
   });
 
   app.get('/api/contact-image', (request, response) => {
@@ -53,5 +54,9 @@ module.exports = (app) => {
 
   app.post('/api/contact', (request, response) => {
     mail(request, response)
+  })
+
+  app.get("/api/article-text", (request, response) => { 
+    articleText.getArticleText(request,response)
   })
 };

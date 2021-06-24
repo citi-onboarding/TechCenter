@@ -1,13 +1,53 @@
 import { ButtonWrapper, Container, MainContainer, UpperWrapper } from "./styles.js";
 import React, { useEffect, useState } from 'react'
 
+import API from "../../services/API"
 import ArticleCard from "../ArticleCard";
 import MEDIUM from "../../services/MEDIUM";
 import Slider from "react-slick";
 
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+        {
+            breakpoint: 1260,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 2,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 720,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        }
+    ]
+};
+
 export default function ArticlesCarousel() {
     const [articles, setArticles] = useState([]);
-    const [isMobile, setIsMobile] = useState(false);
+    const [text, setText] = useState("")
 
     useEffect(() => {
         async function fetchData() {
@@ -16,50 +56,15 @@ export default function ArticlesCarousel() {
             }
             ).catch(e => console.log(e))
         }
+
+        async function fetchText() {
+            await API.get("/article-text").then(res => {
+                setText(res.data[0].Text)
+            }).catch(e => console.log(e))
+        }
         fetchData();
+        fetchText();
     }, [])
-
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 100,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        responsive: [
-            {
-                breakpoint: 1360,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    initialSlide: 2,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 720,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            }
-        ]
-    };
-
-
 
     function toText(node) {
         let tag = document.createElement('div')
@@ -67,21 +72,12 @@ export default function ArticlesCarousel() {
         node = tag.innerText
         return node
     }
+
     function shortenText(text, startingPoint, maxLength) {
         return text.length > maxLength ?
             text.slice(startingPoint, maxLength) :
             text
     }
-
-
-    useEffect(() => {
-        if (window.innerWidth < 1200) {
-            setIsMobile(true)
-        } else {
-            setIsMobile(false)
-        }
-        console.log(isMobile)
-    })
 
     return (
         <MainContainer>
@@ -91,12 +87,9 @@ export default function ArticlesCarousel() {
                     <p> Últimos artigos </p>
                     <button className="blueBtn">Saiba mais</button>
                 </ButtonWrapper>
-                <p className="right-text">
-                    Somos uma comunidade e trocamos conhecimento de forma fluída e
-                    constante. Estamos sempre em busca do intercâmbio das informações!
-                </p>
+                <p className="right-text"> {text} </p>
             </UpperWrapper>
-            <Container id="article-slider" isMobile={isMobile}>
+            <Container id="article-slider" >
                 <Slider {...settings}>
                     {articles.map(e => (
                         <ArticleCard
