@@ -34,7 +34,7 @@ export default function InitialSection() {
                 <InitialSectionTextContainer>
                     <p className="title">
                         Onde tudo se conceta e você evolui
-                </p>
+                    </p>
                     <p className="description"> {description}
                     </p>
 

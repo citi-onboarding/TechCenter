@@ -3,7 +3,8 @@ import API from '../../../services/API';
 import footerLogoTechCenter from '../../../assets/footerLogoTechCenter.svg';
 import mediumImage from '../../../assets/medium.svg';
 import instagramImage from '../../../assets/instagram.svg';
-import youtubeImage from '../../../assets/youtube.svg'
+import youtubeImage from '../../../assets/youtube.svg';
+import citi from '../../../assets/citi.svg';
 
 import {
     FooterContainer,
@@ -47,11 +48,9 @@ export default function Footer() {
     }, [])
 
     return (
-
         <FooterContainer>
 
             <FooterContent>
-
                 <img src={footerLogoTechCenter} alt="Footer Logo" />
 
                 <div>
@@ -74,7 +73,8 @@ export default function Footer() {
                     </div>
 
                     <div className="text">
-                        <p>Made with &lt;/&gt; and &lt;3</p>
+                        <p>Made with &lt;/&gt; and &hearts; by </p>
+                        <img src={citi} alt="citi logo" />
                     </div>
                 </FooterSocialMedia>
             </FooterContent>
