@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const EventContainer = styled.header`
     width: 100%;
-    height: 620px;
+    height: 670px ;
 
     display: flex;
     flex-direction: column;
