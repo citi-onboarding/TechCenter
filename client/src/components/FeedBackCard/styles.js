@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     background-color: var(--SECOND-PRIMARY-COLOR);
-    width: 33.75rem;
-    height: 21.3rem;
+    width: 32.75rem;
+    height: 20.3rem;
     border-radius: 30px;
 
     display: flex;
@@ -18,8 +18,7 @@ export const Container = styled.div`
     p{
         font-style: normal;
         font-weight: normal;
-        font-size: 1.9rem;
-        line-height: 2rem;
+        line-height: 1.3rem;
         color: black;
 
         margin: 1rem auto;
@@ -31,8 +30,8 @@ export const Container = styled.div`
     h3{
         font-style: normal;
         font-weight: bold;
-        font-size: 2.1rem;
-        line-height: 2.2rem;
+        font-size: 1.12rem;
+        line-height: 1.3rem;
         color: black;
         width: 90%;
 
