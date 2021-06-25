@@ -27,8 +27,8 @@ export const ArticleWrapper = styled.div`
     .arrow{
         margin-left: auto;
         position: relative;
-        bottom: 0;
-        margin-right: 1.1rem;
+        bottom: 13px;
+        margin-right: 13px;
     }
 
 `
