@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-    height: 100vh;
+    height: 100vh ;
+    
     background: linear-gradient(
-    to bottom, 
-    white 0%, 
-    white 50%, 
-    var(--BUTTON-TEXT-COLOR) 50%, 
-    var(--BUTTON-TEXT-COLOR) 100%
+        to bottom, 
+        white 0%, 
+        white 60%, 
+        var(--BUTTON-TEXT-COLOR) 50%, 
+        var(--BUTTON-TEXT-COLOR) 120%
     );
 `
 
@@ -19,9 +20,11 @@ export const Container = styled.div`
 
     div{ margin:auto; }
 
-    ul{
-        height: ${({ isMobile }) => isMobile ? "5rem" : "none"} !important;
-        display: ${({ isMobile }) => isMobile ? "block" : "none"} !important;
+    @media(max-width:1200px){
+        ul{
+            height: none;
+            display: none;
+        }
     }
 `
 
@@ -35,6 +38,12 @@ export const UpperWrapper = styled.span`
         width: 40ch;
         margin: auto 0rem;
     }
+
+    @media(max-width: 1200px){
+        .right-text{
+            display: none;
+        }
+    }
 `
 
 export const ButtonWrapper = styled.div`
@@ -47,19 +56,50 @@ export const ButtonWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
-    color:black;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
 
-    hr{
-        width: 25rem;
+    p{
+        color:black;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+
+        border-top: 7px solid black;
+        padding-top: 45.5px;
+        width: 284.31px;
     }
+    
 
     button:hover{
         cursor: pointer;
+        background: var(--SECOND-PRIMARY-COLOR);
+        color: var(--FIRST-PRIMARY-COLOR);
+        outline: none;
+        border: none;
+    }
+
+    br{
+        display: none;
+    }
+
+    @media(max-width: 1200px){
+
+        p{
+            width:152px;
+        }
+
+
+        br{
+            display: block;
+        }
+
+        .blueBtn{
+            display: none;
+        }
+        hr{
+            width: 20rem;
+            margin-bottom: -10rem;
+        }
     }
 
     .blueBtn{

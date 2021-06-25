@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
         --BORDER-ARROW-COLOR: #D9D9D9;
         --BACKGROUND-PARTNERSHIPS-SECTION: #F4F4F4;
         --BORDER-CONTACT-SECTION: #F4F4F4;
+        --FORMS: #F4F4F4;
         --LINE-INPUT: #999999;
     }
 
@@ -69,6 +70,12 @@ export const GlobalStyle = createGlobalStyle`
     @media (min-width: 427px) and (max-width: 821px){
         html {
             font-size: 30%;
+        }
+    }
+
+    @media(min-width: 2560px){
+        html {
+            font-size: 68%;
         }
     }
 `

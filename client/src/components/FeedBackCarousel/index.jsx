@@ -7,6 +7,41 @@ import API from "../../services/API";
 import FeedBackCard from '../FeedBackCard';
 import Slider from "react-slick";
 
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+        {
+            breakpoint: 1440,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 2
+            }
+        },
+        {
+            breakpoint: 720,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+};
+
 export default function FeedBackCarousel() {
     const [feedbacks, setFeedbacks] = useState([]);
 
@@ -20,41 +55,6 @@ export default function FeedBackCarousel() {
     }, [])
 
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 100,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 720,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
     const hiddenClick = function (id) {
         const button = document.querySelectorAll("#feedback-slider button")
         if (button) {
@@ -62,12 +62,10 @@ export default function FeedBackCarousel() {
         }
     }
 
-
     return (
         <div>
             <ButtonWrapper>
-                <hr size="7" width="20%" color="black" />
-                <p> O que falaram sobre <br /> TechCenter </p>
+                <p className="header-title"> O que falaram sobre <br /> Tech Center </p>
                 <span>
                     <button onClick={e => hiddenClick(0)}>&lt;</button>
                     <button onClick={e => hiddenClick(1)}>&gt;</button>

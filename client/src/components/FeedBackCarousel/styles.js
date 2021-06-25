@@ -15,20 +15,36 @@ export const Container = styled.div`
 `
 
 export const ButtonWrapper = styled.div`
-    height: 30vh;
-
+    margin-bottom: 10rem;
     padding-left: 5vw;
-    padding-bottom: 5vh;
     
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    
+
+    .header-title {
+        margin-bottom: 2rem;
+
+        border-top: 7px solid black;
+        padding-top: 2rem;
+        width: 284.31px;
+    }
+
+    @media(max-width: 1200px){
+        .header-title { width:15ch;}
+        br{
+            display:none;
+        }
+    }
+
     color:black;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
+
+    @media(max-width: 1200px){
+        span{display:none;}
+    }
 
     button{
         width: 32px;

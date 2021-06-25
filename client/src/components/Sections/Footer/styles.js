@@ -6,9 +6,13 @@ export const FooterContainer = styled.div`
     padding-top: 2rem;
 
     width: 100%;
-    height: 24rem;
+    height: 27rem;
 
     background: var(--SECOND-PRIMARY-COLOR);
+
+    @media (max-width: 426px){
+        height: 24rem;
+    }
 
 `
 
@@ -25,7 +29,7 @@ export const FooterContent = styled.div`
 
     img {
         width: 32rem;
-        height: 24rem;
+        height: auto;
     }
 
     div {
@@ -51,8 +55,8 @@ export const FooterContent = styled.div`
             grid-column-end: 2;
             grid-row-start: 2;
             grid-row-end: 3;
-            width: 14rem;
-            height: 14rem;
+            width: 18rem;
+            height: auto;
             justify-self: start;
         }
 
@@ -87,7 +91,7 @@ export const FooterSocialMedia = styled.header`
     justify-content: space-between;
     
     div {
-
+        
         &.text {
             display: flex;
             flex: row;
@@ -123,13 +127,14 @@ export const FooterSocialMedia = styled.header`
         grid-row-start: 2;
         grid-row-end: 4;
 
-        height: 12rem;
+
+        height: 14rem;
         width: 14rem;
         justify-self: end;
         align-self: flex-end;
 
         margin-top: 0rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
 
         div {
 

@@ -2,19 +2,25 @@ import styled from 'styled-components';
 
 export const AboutUsContainer = styled.header`
     width: 100%;
-    height: 650px;
+    height:100% ;
+    min-height: 410px;
     margin: 0 auto;
     margin-bottom: 10px;
+    padding-top: 2rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    overflow-x: hidden;
     
     background: var(--FIRST-PRIMARY-COLOR);
 
+
+
     @media(min-width: 427px) and (max-width: 989px){
-        height: 450px;
+        height: 45rem;
     }
 
     @media (max-width: 426px){
@@ -26,7 +32,7 @@ export const TopAboutUsContainer = styled.div`
 
     width: 85%;
     margin: 0 auto; 
-    height: 50%;
+    height: 50% ;
     display: grid;
     grid-template-columns: 38% 42% 20%;
 
@@ -57,7 +63,7 @@ export const TopAboutUsContainer = styled.div`
         }
         
         &.last-top-about-us{
-            border-top: 7px solid var(--COLOR-TEXT);
+            border-top: 0.7rem solid var(--COLOR-TEXT);
 
             p {
                 text-align: right;
@@ -100,12 +106,16 @@ export const ValuesAboutUsContainer = styled.div`
     width: 100%;
     height: 50%;
 
+    margin-bottom: 5rem;
+    height: calc(50% + 5rem);
+
     display: grid;
     grid-template-columns: repeat(3,auto);
     outline: none;
     border: none;
 
     div {
+        height: 30rem;
         border-right: 1px solid black;
 
         display: flex;
@@ -141,7 +151,7 @@ export const ValuesAboutUsContainer = styled.div`
             }
         }
 
-        &.mid-values{
+        &.mid-values {
             background: var(--WHITE-BACKGROUND);
             color: var(--FIRST-PRIMARY-COLOR);
             box-shadow: none;
@@ -149,18 +159,31 @@ export const ValuesAboutUsContainer = styled.div`
         }
     }
 
+    @media(min-width: 427px) and (max-width: 821px){
+        height: 20.4%;
+    }
+
+
+
+    @media(min-width: 822px) and (max-width: 996px){
+        height: 43.5%;
+    }
+
+
+
     @media(max-width: 426px){
 
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
-        height: 100rem;
+        height: 45rem;
 
         div {
 
             display: grid;
             grid-template-columns: 40% 60%;
-            grid-template-rows: 8rem 8rem;
+            grid-template-rows: 7.5rem 7.5rem;
 
             box-shadow: none;
 
@@ -170,6 +193,7 @@ export const ValuesAboutUsContainer = styled.div`
 
             img {
                 width: 9rem;
+                height: 9rem;
                 grid-column-start: 1;
                 grid-column-end: 2;
                 grid-row-start: 1;
