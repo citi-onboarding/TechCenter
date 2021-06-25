@@ -146,7 +146,7 @@ export const ValuesAboutUsContainer = styled.div`
             }
         }
 
-        &.mid-values{
+        &.mid-values {
             background: var(--WHITE-BACKGROUND);
             color: var(--FIRST-PRIMARY-COLOR);
             box-shadow: none;
