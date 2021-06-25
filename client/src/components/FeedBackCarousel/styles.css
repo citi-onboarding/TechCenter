@@ -1,5 +1,11 @@
 .slick-dots {
-    margin-bottom: -2rem;
+    margin-bottom: -10rem;
+}
+
+@media(max-width:1200px){
+    .slick-dots {
+        margin-bottom: -1rem;
+    }
 }
 
 .slick-dots li button:before,
