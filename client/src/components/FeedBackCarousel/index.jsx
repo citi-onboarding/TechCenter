@@ -65,9 +65,7 @@ export default function FeedBackCarousel() {
     return (
         <div>
             <ButtonWrapper>
-                <hr size="7" width="20%" color="black" />
-                <p className="header-title"> O que falaram sobre </p>
-                <p> Tech Center </p>
+                <p className="header-title"> O que falaram sobre <br /> Tech Center </p>
                 <span>
                     <button onClick={e => hiddenClick(0)}>&lt;</button>
                     <button onClick={e => hiddenClick(1)}>&gt;</button>
