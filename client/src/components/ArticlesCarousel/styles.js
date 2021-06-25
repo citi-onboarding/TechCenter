@@ -1,23 +1,13 @@
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-    height: calc(100vh + 300px);
-    margin-top: 100px;
-    padding-bottom: 200px;
-
-    @media(max-width:1200px){
-        height: calc(100vh + 180px);
-        margin-top: 60px;
-        padding-bottom: 120px;
-    }
-
-
+    height: 100vh;
     background: linear-gradient(
-        to bottom, 
-        white 0%, 
-        white 60%, 
-        var(--BUTTON-TEXT-COLOR) 50%, 
-        var(--BUTTON-TEXT-COLOR) 120%
+    to bottom, 
+    white 0%, 
+    white 50%, 
+    var(--BUTTON-TEXT-COLOR) 50%, 
+    var(--BUTTON-TEXT-COLOR) 100%
     );
 `
 
@@ -65,19 +55,16 @@ export const ButtonWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-    p{
-        color:black;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-
-        border-top: 7px solid black;
-        padding-top: 45.5px;
-        width: 284.31px;
-    }
     
+    color:black;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    hr{
+        width: 25rem;
+    }
 
     button:hover{
         cursor: pointer;
@@ -87,21 +74,7 @@ export const ButtonWrapper = styled.div`
         border: none;
     }
 
-    br{
-        display: none;
-    }
-
     @media(max-width: 1200px){
-
-        p{
-            width:152px;
-        }
-
-
-        br{
-            display: block;
-        }
-
         .blueBtn{
             display: none;
         }

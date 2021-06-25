@@ -9,20 +9,18 @@ export default function Navbar() {
 
     window.onscroll = function () { myFunction() };
 
-    const box = document.querySelector("#myHeader")
-
-
     function myFunction() {
-        if (box) {
-            const compHeight = box.offsetHeight
-            const height = window.innerHeight
-            if (window.pageYOffset <= height - compHeight) {
-                setIsOnTop(false)
-            } else {
-                setIsOnTop(true)
-            }
+
+        const height = window.innerHeight
+        console.log(height)
+        if (window.pageYOffset < height) {
+            console.log(height)
+            setIsOnTop(false)
+        } else {
+            setIsOnTop(true)
         }
     }
+
 
     return (
         <Container top={isOnTop} id="myHeader">

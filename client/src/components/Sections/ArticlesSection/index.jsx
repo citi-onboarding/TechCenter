@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function FeedBackSection() {
     return (
-        <Container >
+        <Container id="CONTENT">
             <ArticlesCarousel />
         </Container>
     )
