@@ -33,7 +33,7 @@ export default function AboutUs() {
     }, [])
 
     return (
-        <AboutUsContainer >
+        <AboutUsContainer id="ABOUTUS">
             <TopAboutUsContainer>
                 <img src={legos} alt="Legos Logo" />
 
