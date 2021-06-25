@@ -18,9 +18,9 @@ import Slider from "react-slick";
 
 export default function Event() {
 
-    const [events, setEvents] = useState([]);
-
-    async function getEvents() {
+    const [events, setEvents ]= useState([]);
+    
+    async function getEvents(){
         await API.get('/events').then((response) => {
             let amountOfEvents = [];
             response.data.forEach((event) => {
@@ -59,22 +59,24 @@ export default function Event() {
 
             <EventCarouselContaier>
 
-                <EventCarousel >
-                    <Slider {...CarouselSettings}>
-                        {
-                            events.map((event, index) => {
-                                return (
-                                    <EventCarouselItem
-                                        key={index}
-                                        event={event}
-                                    />
-                                );
-                            })
-                        }
-                    </Slider>
-                </EventCarousel>
+            <EventCarousel>
+                <Slider {...CarouselSettings}>
+                    {
+                        events.map((event,index) => {
+                            return (
+                                <EventCarouselItem
+                                    key={index}
+                                    event = {event}
+                                />
+                            );
+                        })
+                    }
+                </Slider>
+            </EventCarousel>
 
             </EventCarouselContaier>
+
+
         </EventContainer>
 
     );

@@ -1,7 +1,9 @@
 import {
     ContactImageContainer,
+    ContactImageContentImage,
     ContactImageContent,
-    ContactImageContentImage
+    ContactImageContentMobile,
+    ContactImageContentImageMobile
 } from './styles';
 import React, { useEffect, useState } from 'react';
 
@@ -31,24 +33,55 @@ export default function ContactImage() {
         getImages();
     }, [])
 
-    return (
 
-        <ContactImageContainer>
-            <ContactImageContent>
-                <img src={legos} alt="Legos" />
-
-                <ContactImageContentImage>
-                    {
-                        images.map((image, index) => {
-                            return (
-                                <ImageContact url={image.Image.url} key={index} />
-                            );
-                        })
-                    }
-                </ContactImageContentImage>
-            </ContactImageContent>
-        </ContactImageContainer>
+    if (window.innerWidth >= 425) {
+        return (
+            <ContactImageContainer>
+                <ContactImageContent>
+                    <img src={legos} alt="Left Legos" />
 
 
-    );
+                    <ContactImageContentImage>
+                        {
+                            images.map((image, index) => {
+                                return (
+                                    <ImageContact url={image.Image.url} key={index} />
+                                );
+                            })
+                        }
+                    </ContactImageContentImage>
+
+
+                </ContactImageContent>
+            </ContactImageContainer>
+        );
+    } else {
+        return (
+            <ContactImageContainer>
+                <ContactImageContentMobile>
+                    <div className="left">
+                        <img src={leftLego} alt="Legos"/>
+                    </div>
+
+
+                    <ContactImageContentImageMobile>
+                        {
+                            images.map((image, index) => {
+                                return (
+                                    <ImageContact url={image.Image.url} key={index} />
+                                );
+                            })
+                        }
+                    </ContactImageContentImageMobile>
+
+                    <div className="right">
+                        <img src={rightLego} alt="right Legos" />
+                    </div>
+                </ContactImageContentMobile>
+            </ContactImageContainer>
+        );
+
+    }
+
+
 }

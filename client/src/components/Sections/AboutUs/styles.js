@@ -16,8 +16,10 @@ export const AboutUsContainer = styled.header`
     
     background: var(--FIRST-PRIMARY-COLOR);
 
+
+
     @media(min-width: 427px) and (max-width: 989px){
-        height: 450px;
+        height: 45rem;
     }
 
     @media (max-width: 426px){
@@ -61,7 +63,7 @@ export const TopAboutUsContainer = styled.div`
         }
         
         &.last-top-about-us{
-            border-top: 7px solid var(--COLOR-TEXT);
+            border-top: 0.7rem solid var(--COLOR-TEXT);
 
             p {
                 text-align: right;
@@ -148,13 +150,25 @@ export const ValuesAboutUsContainer = styled.div`
             }
         }
 
-        &.mid-values{
+        &.mid-values {
             background: var(--WHITE-BACKGROUND);
             color: var(--FIRST-PRIMARY-COLOR);
             box-shadow: none;
             box-shadow: inset 0px 5px 2px -2px gray;
         }
     }
+
+    @media(min-width: 427px) and (max-width: 821px){
+        height: 20.4%;
+    }
+
+
+
+    @media(min-width: 822px) and (max-width: 996px){
+        height: 43.5%;
+    }
+
+
 
     @media(max-width: 426px){
 

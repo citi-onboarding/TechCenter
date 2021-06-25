@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const EventContainer = styled.header`
     width: 100%;
-    height: 670px ;
+    height: 620px;
 
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ export const EventTopContainer = styled.div`
     div {
 
         &.hightlight-box {
-            border-top: 7px solid var(--BLACK);
+            border-top: 0.7rem solid var(--BLACK);
             font-size: 2.0rem;
             color: var(--BLACK);
             font-weight: 700;

@@ -7,13 +7,12 @@ import Footer from "./components/Sections/Footer";
 import { GlobalStyle } from "./styles/global.js";
 import InitialSection from "./components/Sections/InitialSection";
 import Partnerships from "./components/Sections/Partnership";
-import React from "react"
 
 function App() {
 
   return (
 
-    <React.Fragment>
+    <>
       <GlobalStyle />
       <InitialSection />
       <Event />
@@ -23,7 +22,7 @@ function App() {
       <ArticleSection />
       <Contact />
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
 
