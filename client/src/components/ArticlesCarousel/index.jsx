@@ -51,6 +51,7 @@ export default function ArticlesCarousel() {
 
     useEffect(() => {
         async function fetchData() {
+            // @techcentercomunidade
             MEDIUM.get("/@KonradDaWo").then(res => {
                 setArticles(res.data.items)
             }
@@ -80,12 +81,13 @@ export default function ArticlesCarousel() {
     }
 
     return (
-        <MainContainer>
+        <MainContainer id="CONTENT">
             <UpperWrapper>
                 <ButtonWrapper>
-                    <hr size="7" width="20%" color="black" />
-                    <p> Últimos artigos </p>
-                    <button className="blueBtn">Saiba mais</button>
+                    <p> Últimos <br/> artigos </p>
+                    <a href="https://medium.com/@techcentercomunidade" rel="noreferrer" target="_blank">
+                        <button className="blueBtn">Saiba mais</button>
+                    </a>
                 </ButtonWrapper>
                 <p className="right-text"> {text} </p>
             </UpperWrapper>
