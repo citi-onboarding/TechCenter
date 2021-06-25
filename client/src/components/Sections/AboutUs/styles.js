@@ -106,8 +106,7 @@ export const ValuesAboutUsContainer = styled.div`
     width: 100%;
     height: 50%;
 
-    margin-bottom: 5rem;
-    height: calc(50% + 5rem);
+    height: 50% ;
 
     display: grid;
     grid-template-columns: repeat(3,auto);
