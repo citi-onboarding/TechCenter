@@ -105,6 +105,10 @@ export const ButtonWrapper = styled.div`
         .blueBtn{
             display: none;
         }
+        hr{
+            width: 20rem;
+            margin-bottom: -10rem;
+        }
     }
 
     .blueBtn{

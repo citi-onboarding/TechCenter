@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from 'react';
+
+
 import {
     ContactImageContainer,
     ContactImageContent,
@@ -5,7 +8,7 @@ import {
     ContactImageContentImageMobile,
     ContactImageContentMobile
 } from './styles';
-import React, { useEffect, useState } from 'react';
+
 
 import API from '../../services/API';
 import ImageContact from '../ImageContact';
@@ -41,7 +44,6 @@ export default function ContactImage() {
             <ContactImageContainer>
                 <ContactImageContent>
                     <img src={legos} alt="Left Legos" />
-
 
                     <ContactImageContentImage>
                         {
