@@ -23,6 +23,7 @@ export const ButtonWrapper = styled.div`
 
     .header-title {
         margin-top: 2rem;
+        margin-bottom: 2rem;
 
         border-top: 7px solid black;
         padding-top: 45.5px;
@@ -30,13 +31,12 @@ export const ButtonWrapper = styled.div`
     }
 
     @media(max-width: 1200px){
-        .header-title { width:152px;}
+        .header-title { width:15ch;}
+        br{
+            display:none;
+        }
     }
 
-    .mainName{
-        margin-bottom: 2rem;
-    }
-    
     color:black;
     font-style: normal;
     font-weight: bold;
