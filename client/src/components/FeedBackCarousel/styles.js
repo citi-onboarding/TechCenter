@@ -22,11 +22,10 @@ export const ButtonWrapper = styled.div`
     flex-direction: column;
 
     .header-title {
-        margin-top: 2rem;
         margin-bottom: 2rem;
 
         border-top: 7px solid black;
-        padding-top: 45.5px;
+        padding-top: 2rem;
         width: 284.31px;
     }
 

@@ -1,17 +1,8 @@
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-    height: calc(100vh + 300px);
-    margin-top: 100px;
-    padding-bottom: 200px;
-
-    @media(max-width:1200px){
-        height: calc(100vh + 180px);
-        margin-top: 60px;
-        padding-bottom: 120px;
-    }
-
-
+    height: 100vh ;
+    
     background: linear-gradient(
         to bottom, 
         white 0%, 

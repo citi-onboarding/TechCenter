@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const AboutUsContainer = styled.header`
     width: 100%;
-    padding-top: 8rem;
-    height: calc(100% + 8rem);
+    height:100% ;
     min-height: 410px;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -13,6 +12,8 @@ export const AboutUsContainer = styled.header`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    overflow-x: hidden;
     
     background: var(--FIRST-PRIMARY-COLOR);
 
@@ -31,8 +32,7 @@ export const TopAboutUsContainer = styled.div`
 
     width: 85%;
     margin: 0 auto; 
-    margin-top: 10rem;
-    height: calc(50% + 10rem);
+    height: 50% ;
     display: grid;
     grid-template-columns: 38% 42% 20%;
 

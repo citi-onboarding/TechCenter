@@ -7,6 +7,8 @@ export const InitialSectionContainer = styled.header`
     align-items: center;
     justify-content: space-around;
 
+    overflow-x: hidden;
+
     height: 92vh;
     width: 100%;
 
