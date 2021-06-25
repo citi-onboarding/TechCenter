@@ -36,7 +36,12 @@ export const ButtonWrapper = styled.div`
     font-size: 24px;
     line-height: 29px;
 
-    @media(max-width: 1200px){        
+    @media(max-width: 1200px){
+        hr{ 
+            width: 20rem; 
+            margin-bottom: -10rem; 
+        }
+        
         span{display:none;}
     }
 
