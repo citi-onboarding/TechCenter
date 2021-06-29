@@ -53,7 +53,7 @@ export default function ArticlesCarousel() {
         async function fetchData() {
             // KonradDaWo
             // techcentercomunidade
-            MEDIUM.get("/@KonradDaWo").then(res => {
+            MEDIUM.get("/@techcentercomunidade").then(res => {
                 setArticles(res.data.items)
             }
             ).catch(e => console.log(e))
