@@ -12,9 +12,9 @@
     font-size: 0;
 }
 
-.slick-dots {
+/* .slick-dots {
     bottom: -3rem;
-}
+} */
 
 .slick-dots li button:before{
     font-size: 1.4rem;
@@ -30,12 +30,12 @@
     opacity: 0.9;
 }
 
-@media (max-width: 426px){
+/* @media (max-width: 426px){
 
     .slick-dots {
         bottom: -8rem;
     }
 
-}
+} */
 
 
