@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.nav`
+export const Container = styled.nav `
+
+    /* position:  ${props => props.top ? "fixed" : "auto"}; */
+    /* top: ${props => props.top ? "0" : "auto"};  */
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 5;
+
     .navText{
         text-decoration: none;
         color: black;

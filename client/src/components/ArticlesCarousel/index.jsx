@@ -51,8 +51,9 @@ export default function ArticlesCarousel() {
 
     useEffect(() => {
         async function fetchData() {
-            // @techcentercomunidade
-            MEDIUM.get("/@KonradDaWo").then(res => {
+            // 
+            // techcentercomunidade
+            MEDIUM.get("/@techcentercomunidade").then(res => {
                 setArticles(res.data.items)
             }
             ).catch(e => console.log(e))
