@@ -40,7 +40,7 @@ export default function InitialSection() {
                     <p className="description"> {description}
                     </p>
 
-                    <ButtonTechCenter className="join-to-community" description="Entrar na comunidade" />
+                    <ButtonTechCenter className="join-to-community" description="Entrar na comunidade" id = "MOVE"/>
                 </InitialSectionTextContainer>
 
                 <InitialSectionImageContainer>
