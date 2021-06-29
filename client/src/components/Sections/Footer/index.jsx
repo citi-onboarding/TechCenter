@@ -62,13 +62,13 @@ export default function Footer() {
                 <FooterSocialMedia>
                     <div className="social">
                         <img src={instagramImage} alt="instagram" onClick={ () => {
-                            window.location.href = {instagram};
+                            window.open(instagram)
                         }}/>
                         <img src={mediumImage} alt="medium" onClick={ () => {
-                            window.location.hred = {medium};
+                            window.open(medium)
                         }}/>
                         <img src={youtubeImage} alt="youtube" onClick= { () => {
-                            window.location.href = {youtube};
+                            window.open(youtube);
                         }} />
                     </div>
 
