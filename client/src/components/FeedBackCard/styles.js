@@ -14,7 +14,7 @@ export const Container = styled.div`
 
     @media(max-width:1200px){
         width: 315px;
-        height: calc(315px * 0.62);
+        height: calc(315px * 0.65);
     }
 
     display: flex;

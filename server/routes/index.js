@@ -11,6 +11,7 @@ const contactImage = require('../controllers/ContactImageController');
 const contact = require('../controllers/ContactController');
 const mail = require('../controllers/MailController');
 const articleText = require("../controllers/ArticleText")
+const upperText = require("../controllers/UpperText")
 
 
 module.exports = (app) => {
@@ -56,7 +57,11 @@ module.exports = (app) => {
     mail(request, response)
   })
 
-  app.get("/api/article-text", (request, response) => { 
-    articleText.getArticleText(request,response)
+  app.get("/api/article-text", (request, response) => {
+    articleText.getArticleText(request, response)
+  })
+
+  app.get("/api/upper-text", (request, response) => {
+    upperText.getUpperText(request, response)
   })
 };
