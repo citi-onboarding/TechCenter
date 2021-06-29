@@ -43,6 +43,7 @@ export const ButtonWrapper = styled.div`
     line-height: 29px;
 
     @media(max-width: 1200px){
+        
         span{display:none;}
     }
 
