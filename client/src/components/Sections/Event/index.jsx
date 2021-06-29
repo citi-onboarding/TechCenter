@@ -21,6 +21,7 @@ export default function Event() {
     const [events, setEvents ]= useState([]);
     
     async function getEvents(){
+        
         await API.get('/events').then((response) => {
             let amountOfEvents = [];
             response.data.forEach((event) => {
