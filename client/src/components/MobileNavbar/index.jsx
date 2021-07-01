@@ -20,28 +20,10 @@ export default function MobileNavbar() {
         setAnchorEl(null);
     };
 
-    const [isOnTop, setIsOnTop] = useState(false);
-
-    window.onscroll = function () { myFunction() };
-
-    const box = document.querySelector("#myMobileNav")
-
-
-    function myFunction() {
-        if (box) {
-            const compHeight = box.offsetHeight
-            const height = window.innerHeight
-            if (window.pageYOffset <= height - compHeight) {
-                setIsOnTop(false)
-            } else {
-                setIsOnTop(true)
-            }
-        }
-    }
 
 
     return (
-        <Container id="myMobileNav">
+        <Container>
             <a href="#FIRST">
                 <img src={logo} alt="mobile navbar logo" />
             </a>
