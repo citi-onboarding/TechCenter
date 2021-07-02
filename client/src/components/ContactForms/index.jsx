@@ -37,8 +37,7 @@ export default function ContactForms() {
             setFeedback(answer);
             clearInputs();
         }).catch((error) => {
-            const { answer } = error.data;
-            setFeedback(answer);
+            setFeedback("Desculpe. Houve alguma falha no envio!");
         })
     }
 

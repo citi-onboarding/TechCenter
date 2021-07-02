@@ -10,8 +10,9 @@ const aboutUs = require('../controllers/AboutUsController');
 const contactImage = require('../controllers/ContactImageController');
 const contact = require('../controllers/ContactController');
 const mail = require('../controllers/MailController');
-const articleText = require("../controllers/ArticleText")
-const upperText = require("../controllers/UpperText")
+const articleText = require("../controllers/ArticleText");
+const upperText = require("../controllers/UpperText");
+const emails = require("../controllers/EmailsController");
 
 
 module.exports = (app) => {
@@ -63,5 +64,9 @@ module.exports = (app) => {
 
   app.get("/api/upper-text", (request, response) => {
     upperText.getUpperText(request, response)
+  })
+
+  app.get("/api/emails", (request, response) => {
+    emails.getEmails(request, response)
   })
 };
