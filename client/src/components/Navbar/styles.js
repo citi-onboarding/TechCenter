@@ -7,15 +7,14 @@ export const Container = styled.nav`
         }
     }
 
+    position: sticky;
+    top: 0;
+
     background-color: var(--FIRST-PRIMARY-COLOR);
     height: 8vh;
     width: 100%; 
-
     z-index: 2;
-
-    position:  ${props => props.top ? "fixed" : "auto"};
-    top: ${props => props.top ? "0" : "auto"};;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

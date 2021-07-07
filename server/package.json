@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Jorrmungandr/keystone-admin#readme",
   "dependencies": {
     "@babel/preset-react": "^7.6.3",
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "keystone": "^4.2.1",

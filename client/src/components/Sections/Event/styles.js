@@ -8,7 +8,6 @@ export const EventContainer = styled.header`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     background: var(--WHITE-BACKGROUND);
 
     @media (min-width: 990px) and (max-width: 1099px){

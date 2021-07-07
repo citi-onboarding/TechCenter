@@ -6,7 +6,7 @@ export const AboutUsContainer = styled.header`
     min-height: 410px;
     margin: 0 auto;
     margin-bottom: 10px;
-    padding-top: 2rem;
+    padding-top: 10rem;
 
     display: flex;
     flex-direction: column;

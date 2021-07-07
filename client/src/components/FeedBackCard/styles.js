@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div `
     background-color: var(--SECOND-PRIMARY-COLOR);
     border-radius: 30px;
     
-    width: 524px;
-    height: calc(524px * 0.62);
+    width: 20vw;
+    height: calc(20vw * 0.65);
+
+    @media(max-width:1500px){
+        width: 324px;
+        height: calc(324px * 0.68);
+    }
 
     @media(max-width:1440px){
         width: 324px;
-        height: calc(324px * 0.62);
+        height: calc(324px * 0.65);
     }
 
     @media(max-width:1200px){
@@ -24,7 +29,11 @@ export const Container = styled.div`
 
     text-align: center;
 
-    img{ margin: 1rem auto; }
+    img{ 
+        width: 39.2px;
+        height: 24.86px;
+        margin: 1rem auto; 
+        }
 
     p{
         font-style: normal;
@@ -35,17 +44,16 @@ export const Container = styled.div`
 
         margin: 1rem auto;
 
-        /* width: clamp(45ch, 50%, 75ch); */
+        /* width: clamp(35ch, 50%, 45ch); */
         width: 90%;
     }
 
     @media(min-width:460px) and  (max-width:1200px){
         p{
-            font-size: 3rem;
-            line-height: 3.1rem;
+            font-size: calc(100% / 51ch);
+            line-height: 2.9rem;
         }
     }
-
 
 
     h3{
