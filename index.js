@@ -4,6 +4,8 @@ const path = require('path');
 
 require('dotenv').config();
 
+// IF I'M HERE THIS IS THE LAST ITERATION
+
 keystone.init({
   name: 'Keystone CMS',
   static: [path.join(__dirname, './public')],
